@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
        rigidBody.velocity = new Vector2(x * 7f, rigidBody.velocity.y);
 
         if (Input.GetButtonDown("Jump")) {
-            rigidBody.velocity = new Vector2(0, 10f);
+            rigidBody.velocity = new Vector2(0, 7f);
         }
     }
 }
