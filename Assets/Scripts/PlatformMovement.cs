@@ -7,7 +7,7 @@ public class PlatformMovement : MonoBehaviour
    [SerializeField] private GameObject[] points;
    private int index = 0;
 
-   [SerializeField] private float speed = 4f;
+   [SerializeField] private float speed = 6f;
     // Start is called before the first frame update
     void Start()
     {
