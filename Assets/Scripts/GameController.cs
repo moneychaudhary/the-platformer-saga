@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       SceneManager.LoadScene("GameOver");
     }
 
 
@@ -26,6 +26,6 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame() {
-         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+         SceneManager.LoadScene("Home");
     }
 }

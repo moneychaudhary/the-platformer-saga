@@ -21,11 +21,11 @@ public class PlayerLife : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Trap")) {
             gameObject.SetActive(false);
-            Invoke("Reload", 2f);
+            GameOver();
         }
     }
 
-    private void Reload() {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    private void GameOver() {
+           SceneManager.LoadScene("GameOver");
     }
 }
