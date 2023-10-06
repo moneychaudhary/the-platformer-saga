@@ -24,4 +24,8 @@ public class GameController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
     }
+
+    public void StartGame() {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
