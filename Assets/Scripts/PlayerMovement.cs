@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rigidBody;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space")) {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, 14, 0);
+       float x = Input.GetAxisRaw("Horizontal");
+       rigidBody.velocity = new Vector2(x * 7f, rigidBody.velocity.y);
+
+        if (Input.GetButtonDown("Jump")) {
+            rigidBody.velocity = new Vector2(0, 10f);
         }
     }
 }
