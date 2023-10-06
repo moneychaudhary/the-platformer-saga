@@ -20,8 +20,12 @@ public class PlayerLife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Trap")) {
-             rigidBody.bodyType = RigidbodyType2D.Static;
-             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            gameObject.SetActive(false);
+            Invoke("Reload", 2f);
         }
+    }
+
+    private void Reload() {
+           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
