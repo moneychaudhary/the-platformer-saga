@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
-    private float speed = 5f;
-    private float jump = 7f;
+    [SerializeField] private float speed = 6f;
+    [SerializeField] private float jump = 8f;
     // Start is called before the first frame update
     void Start()
     {
