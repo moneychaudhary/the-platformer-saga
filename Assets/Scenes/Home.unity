@@ -1118,6 +1118,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1301577539959142225, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4534861961031919033, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1130,9 +1134,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Color Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 4841485990986394688, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841485990986394688, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086004117214028730, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711793280386864434, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919091147851937108, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7071886099643993377, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_Creator
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589389472898885166, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1155,7 +1183,7 @@ GameObject:
   - component: {fileID: 1521127604}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

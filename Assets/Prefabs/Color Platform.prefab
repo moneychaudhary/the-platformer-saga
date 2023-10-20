@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4534861961031919033}
   - component: {fileID: 6282824874828949735}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7071886099643993377}
   - component: {fileID: 6100267834482452736}
   - component: {fileID: -3563710093183793065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Color Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 5442566259468811226}
   - component: {fileID: 4341249239655000480}
   - component: {fileID: 5721886438109163450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1303506764416011782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6903154744759276345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NextColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153952190845458494}
   - component: {fileID: 5907674601295184376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

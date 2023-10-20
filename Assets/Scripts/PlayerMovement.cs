@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
        float x = Input.GetAxisRaw("Horizontal");
        rigidBody.velocity = new Vector2(x * speed, rigidBody.velocity.y);
 
+        Debug.Log(IsGrounded());
+        
         if (Input.GetButtonDown("Jump") && IsGrounded()) {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jump);
         }
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             boxCollider.bounds.size,
             0f,
             Vector2.down,
-            0.1f,
+            0.2f,
             jumpableGround
         );
     }
