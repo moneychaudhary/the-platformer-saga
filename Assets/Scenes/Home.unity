@@ -321,6 +321,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -338,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -663,7 +675,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.01886791, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1369,6 +1381,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -1386,7 +1410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1559,6 +1583,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -1576,7 +1612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1834,6 +1870,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -1851,7 +1899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2024,6 +2072,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -2041,7 +2101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2209,6 +2269,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -2226,7 +2298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2399,6 +2471,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -2416,7 +2500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2674,6 +2758,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -2691,7 +2787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2932,6 +3028,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -2949,7 +3057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3122,6 +3230,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -3139,7 +3259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3357,6 +3477,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -3374,7 +3506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3585,7 +3717,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1521127600
@@ -6009,6 +6141,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.b
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.g
+      value: 0.61521006
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Red
       objectReference: {fileID: 0}
@@ -6026,7 +6170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[4].colorName
-      value: Black
+      value: Grey
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6199,7 +6343,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
