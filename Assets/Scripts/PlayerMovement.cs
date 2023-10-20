@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Health.playerHealth = 1f;
         boxCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
     }

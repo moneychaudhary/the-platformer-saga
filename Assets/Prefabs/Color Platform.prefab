@@ -300,7 +300,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4068be29df6486daf857d241c202de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: []
+  colors:
+  - colorName: Gain_Bullet
+    color: {r: 0, g: 0.5019608, b: 0, a: 0}
+  - colorName: Double_Damage
+    color: {r: 1, g: 0.64705884, b: 0, a: 0}
+  - colorName: Gain_Health
+    color: {r: 1, g: 0, b: 0, a: 0}
+  - colorName: Immune
+    color: {r: 0.5019608, g: 0, b: 0.5019608, a: 0}
+  - colorName: Color1
+    color: {r: 1, g: 0.34117648, b: 0.2, a: 1}
+  - colorName: Color2
+    color: {r: 0.5019608, g: 0, b: 0.5019608, a: 1}
+  - colorName: Color3
+    color: {r: 0.5754717, g: 0.42074582, b: 0.42074582, a: 1}
+  - colorName: Freeze_Enemy
+    color: {r: 0.6784314, g: 0.84705883, b: 0.9019608, a: 1}
   colorChangeInterval: 15
   timerText: {fileID: 5721886438109163450}
   nextColorIndicator: {fileID: 0}

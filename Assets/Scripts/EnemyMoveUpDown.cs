@@ -10,7 +10,7 @@ public class EnemyMoveUpDown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Health.enemyHealth = 1f;
     }
 
     // Update is called once per frame
