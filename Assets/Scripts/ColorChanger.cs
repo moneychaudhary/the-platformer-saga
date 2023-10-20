@@ -9,7 +9,7 @@ public class ColorChanger : MonoBehaviour
 {
     public List<ColorData> colors = new List<ColorData>(); // List of color data.
     private SpriteShapeRenderer platformRenderer;
-    private int currentColorIndex;
+    public int currentColorIndex;
     private float timeRemaining;
     public float colorChangeInterval = 15f;
 
