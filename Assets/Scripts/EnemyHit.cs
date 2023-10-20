@@ -19,9 +19,14 @@ public class EnemyHit : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D collision) {
         if (collision.gameObject.tag == "Bullet") {
-            Debug.Log("Enemy hit!");
+            Color bulletColor = collision.gameObject.GetComponent<Renderer>().material.color;
+            Color enemyColor = transform.GetComponent<Renderer>().material.color;
+            if (bulletColor == enemyColor)
+            {
+                enemyHealthBar.Damage(0.1f);
+            }
             Destroy(collision.gameObject);
-            enemyHealthBar.Damage(0.1f);
+
         }
     }
 

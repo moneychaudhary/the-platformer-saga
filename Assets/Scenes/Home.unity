@@ -7065,6 +7065,7 @@ GameObject:
   - component: {fileID: 1946947420}
   - component: {fileID: 1946947419}
   - component: {fileID: 1946947421}
+  - component: {fileID: 1946947422}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -7268,6 +7269,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 703143137}
+--- !u!114 &1946947422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946947413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68de089661a2a4f62b0376a256174483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - colorName: Color1
+    color: {r: 1, g: 0.34117648, b: 0.2, a: 1}
+  - colorName: Color2
+    color: {r: 0.5019608, g: 0, b: 0.5019608, a: 1}
+  - colorName: Color3
+    color: {r: 0.5754717, g: 0.42074582, b: 0.42074582, a: 1}
+  colorChangeInterval: 15
+  platformColors: {fileID: 0}
 --- !u!1 &2119144861
 GameObject:
   m_ObjectHideFlags: 0
