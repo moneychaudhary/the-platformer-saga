@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EnemyHealthBar : MonoBehaviour
+public class PlayerHealthBar : MonoBehaviour
 {
     private RectTransform healthBar;
-
     // Start is called before the first frame update
     void Start()
     {
         healthBar = GetComponent<RectTransform>();
-        UpdateHealthBar(Health.enemyHealth);
+        UpdateHealthBar(Health.playerHealth);
     }
 
     // Update is called once per frame
@@ -22,18 +21,18 @@ public class EnemyHealthBar : MonoBehaviour
     }
 
     public void Damage(float damage) {
-        if(Health.enemyHealth - damage >= 0f) {
-            Health.enemyHealth -= damage;
+        if(Health.playerHealth - damage >= 0f) {
+            Health.playerHealth -= damage;
         } else {
-            Health.enemyHealth = 0f;
+            Health.playerHealth = 0f;
+        }
+        
+        if(Health.playerHealth == 0f) {
+            Debug.Log("Player died!");
+            SceneManager.LoadScene("GameOver");
         }
 
-        if(Health.enemyHealth == 0f) {
-            Debug.Log("Enemy died!");
-            SceneManager.LoadScene("Finish");
-        }
-
-        UpdateHealthBar(Health.enemyHealth);
+        UpdateHealthBar(Health.playerHealth);
     }
 
     public void UpdateHealthBar(float size) {
