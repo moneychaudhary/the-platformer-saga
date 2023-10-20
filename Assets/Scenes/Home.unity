@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1123,6 +1123,7 @@ GameObject:
   - component: {fileID: 703143143}
   - component: {fileID: 703143142}
   - component: {fileID: 703143141}
+  - component: {fileID: 703143145}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1209,8 +1210,8 @@ Transform:
   m_GameObject: {fileID: 703143137}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.0744, y: -9.7089, z: 0}
-  m_LocalScale: {x: 1.6112429, y: 1.6188829, z: 1}
+  m_LocalPosition: {x: -21.38, y: -9.88, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1247440455}
@@ -1321,6 +1322,19 @@ MonoBehaviour:
   jumpablePlatform:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &703143145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703143137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1300f839352ae4abc6a70c0903ef3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthBar: {fileID: 2119144865}
 --- !u!114 &787814256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7265,6 +7279,7 @@ GameObject:
   - component: {fileID: 2119144862}
   - component: {fileID: 2119144864}
   - component: {fileID: 2119144863}
+  - component: {fileID: 2119144865}
   m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
@@ -7329,6 +7344,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119144861}
   m_CullTransparentMesh: 1
+--- !u!114 &2119144865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119144861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e1f83d51263424b99bd6ba173b8de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
