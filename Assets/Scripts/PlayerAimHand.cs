@@ -87,12 +87,10 @@ public class PlayerAimHand : MonoBehaviour
         if (hit)
         {
             Color tempColor = hit.transform.GetComponent<Renderer>().material.color;
-            Debug.Log("Reload!" + tempColor.r + " " + tempColor.g + " " + tempColor.b + " " + tempColor.a);
             if (Math.Round(tempColor.r, 2) == 0 && Math.Round(tempColor.g, 2) == 0.5 && Math.Round(tempColor.b, 2) == 0 && Math.Round(tempColor.a, 2) == 0)
             {
                 if(Time.time > reloadNextFire)
                 {
-                    Debug.Log("Reload!");
                     bulletCount = Math.Min(bulletCount + 3, 30);
                     bulletCountText.text = bulletCount.ToString();
                     reloadNextFire = Time.time + 1.0f;

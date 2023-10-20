@@ -1493,6 +1493,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealthBar: {fileID: 2119144865}
+  platform:
+    serializedVersion: 2
+    m_Bits: 24
 --- !u!114 &787814256
 MonoBehaviour:
   m_ObjectHideFlags: 0
