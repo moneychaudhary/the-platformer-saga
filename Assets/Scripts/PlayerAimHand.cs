@@ -57,19 +57,6 @@ public class PlayerAimHand : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-        
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        Debug.Log("hekko");
-    //        bulletColor = collision.gameObject.GetComponent<Renderer>().material.color;
-    //        shoot();
-    //        Debug.Log(bulletColor);
-    //    }
-            
-        
-    //}
 
     public void shoot()
     {

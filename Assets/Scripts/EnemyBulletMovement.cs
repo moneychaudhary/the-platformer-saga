@@ -31,8 +31,8 @@ public class EnemyBulletMovement : MonoBehaviour
         {
             GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z - 90)));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            SpriteRenderer bulletSprite = bullet.GetComponent<SpriteRenderer>();
-            bulletSprite.color = Color.green;
+            Renderer bulletSprite = bullet.GetComponent<Renderer>();
+            bulletSprite.material.color = Color.green;
             moveDir = (targetPlayer.transform.position - transform.position).normalized * speed;
             if(moveDir.x > 0)
             {
