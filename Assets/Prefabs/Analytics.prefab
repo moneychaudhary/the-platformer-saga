@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb4d55ce577743148cd2d5709224362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  googleFormURL: https://docs.google.com/forms/d/e/1FAIpQLSdW-VoNShZxdzZvnHGu9RKK1ps9cO39nGyTtl7oyA_pPB9FIA/viewform
+  googleFormURL: https://docs.google.com/forms/d/e/1FAIpQLSdW-VoNShZxdzZvnHGu9RKK1ps9cO39nGyTtl7oyA_pPB9FIA/formResponse

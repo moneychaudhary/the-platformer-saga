@@ -14,7 +14,7 @@ public class GoogleFormUploader : MonoBehaviour
     IEnumerator UploadData(string dataToRecord, int analyticAbility)
     {
         WWWForm form = new WWWForm();
-        form.AddField(dataToRecord, analyticAbility.ToString()); // Replace with your Google Form field ID
+        form.AddField(dataToRecord, analyticAbility.ToString());
 
         UnityWebRequest www = UnityWebRequest.Post(googleFormURL, form);
         yield return www.SendWebRequest();
