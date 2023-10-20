@@ -35,6 +35,7 @@ public class PlayerAimHand : MonoBehaviour
         Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        angle = Math.Min(Math.Max(angle, -90), 90);
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
     }
 
