@@ -21,7 +21,7 @@ public class PlayerHit : MonoBehaviour
         if (collision.gameObject.tag == "Bullet") {
             Debug.Log("Player hit!");
             Destroy(collision.gameObject);
-            playerHealthBar.Damage(0.02f);
+            playerHealthBar.Damage(0.04f);
         }
     }
 }
