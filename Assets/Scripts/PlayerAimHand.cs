@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 using System;
+using UnityEngine.UI;
 
 public class PlayerAimHand : MonoBehaviour
 {
     private Transform aimTransform;
     private Transform aimGunEndPoint;
+    public Text bulletCountText;
+    public int bulletCount;
     [SerializeField] public LayerMask platform;
     public event EventHandler<OnShootEventArgs> OnShoot;
     public class OnShootEventArgs : EventArgs
@@ -20,8 +23,14 @@ public class PlayerAimHand : MonoBehaviour
     public GameObject startLocation;
     private Color bulletColor;
     private BoxCollider2D boxCollider;
+    private void Start()
+    {
+        bulletCount = 30;
+        bulletCountText.text = bulletCount.ToString();
+    }
     private void Awake()
     {
+        
         aimTransform = transform.Find("Aim");
         aimGunEndPoint = aimTransform.Find("GunEndPoint");
         Debug.Log(aimGunEndPoint);
@@ -68,7 +77,7 @@ public class PlayerAimHand : MonoBehaviour
             Vector2.down,
             0.2f,
             platform);
-        if (hit)
+        if (hit && bulletCount > 0)
         {
             GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z - 90)));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -78,6 +87,8 @@ public class PlayerAimHand : MonoBehaviour
             bulletSprite.material.color = bulletColor;
             
             rb.velocity = startLocation.transform.right * speed;
+            bulletCount--;
+            bulletCountText.text = bulletCount.ToString();
         }
             
     }
