@@ -22,7 +22,7 @@ public class EnemyHit : MonoBehaviour
         if (collision.gameObject.tag == "Bullet") {
             Color bulletColor = collision.gameObject.GetComponent<Renderer>().material.color;
             Color enemyColor = transform.GetComponent<Renderer>().material.color;
-            if (bulletColor == enemyColor)
+            if (bulletColor == enemyColor || enemyColor == Color.blue)
             {
                 enemyHealthBar.Damage(0.1f);
             }

@@ -20,7 +20,7 @@ public class PlayerHit : MonoBehaviour
     private void OnCollisionEnter2D (Collision2D collision) {
         if (collision.gameObject.tag == "Bullet") {
             Destroy(collision.gameObject);
-            playerHealthBar.Damage(0.04f);
+            playerHealthBar.Damage(0.05f);
         }
     }
 }
