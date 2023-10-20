@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletCountText: {fileID: 18843952}
-  bulletCount: 0
+  bulletCount: 30
   platform:
     serializedVersion: 2
     m_Bits: 24
