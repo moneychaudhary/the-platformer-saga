@@ -7,33 +7,39 @@ using UnityEngine.U2D;
 
 public class ColorChanger : MonoBehaviour
 {
-    public Material[] materials;
-    private Renderer platformRenderer;
-    private int currentMaterialIndex;
+    public List<ColorData> colors = new List<ColorData>(); // List of color data.
+    private SpriteShapeRenderer platformRenderer;
+    private int currentColorIndex;
     private float timeRemaining;
-    public float materialChangeInterval = 15f;
+    public float colorChangeInterval = 15f;
 
     public TextMesh timerText; // Reference to the TextMesh component for displaying the timer.
-    public GameObject nextMaterialIndicator; // Reference to the GameObject representing the next material indicator.
-    private int nextMaterialIndex;
-
+    public GameObject nextColorIndicator; // Reference to the GameObject representing the next color indicator.
+    private int nextColorIndex;
 
     public Transform floatTransform;
-    public float floatHeight = 1.0f;       // The height of the float movement.
-    public float floatSpeed = 1.0f;        // The speed of the float movement.
+    public float floatHeight = 1.0f; // The height of the float movement.
+    public float floatSpeed = 1.0f; // The speed of the float movement.
 
-    private Vector3 initialPosition;       // Store the initial position of the object.
+    private Vector3 initialPosition; // Store the initial position of the object.
+
+    [System.Serializable]
+    public class ColorData
+    {
+        public string colorName;
+        public Color color;
+    }
 
     private void Start()
     {
-        platformRenderer = GetComponent<Renderer>();
-        currentMaterialIndex = Random.Range(0, materials.Length);
-        platformRenderer.material.color = materials[currentMaterialIndex].color;
-        timeRemaining = materialChangeInterval;
+        platformRenderer = GetComponent<SpriteShapeRenderer>();
+        currentColorIndex = Random.Range(0, colors.Count);
+        platformRenderer.material.color = colors[currentColorIndex].color;
+        timeRemaining = colorChangeInterval;
         UpdateTimerText();
-        UpdateNextMaterialIndicator();
+        UpdateNextColorIndicator();
 
-        StartCoroutine(ChangeMaterial());
+        StartCoroutine(ChangeColor());
 
         // Store the initial position of the object.
         initialPosition = floatTransform.position;
@@ -42,7 +48,7 @@ public class ColorChanger : MonoBehaviour
         StartCoroutine(FloatObject());
     }
 
-    private IEnumerator ChangeMaterial()
+    private IEnumerator ChangeColor()
     {
         while (true)
         {
@@ -52,10 +58,10 @@ public class ColorChanger : MonoBehaviour
 
             if (timeRemaining <= 0f)
             {
-                currentMaterialIndex = nextMaterialIndex;
-                platformRenderer.material = materials[currentMaterialIndex];
-                timeRemaining = materialChangeInterval;
-                UpdateNextMaterialIndicator();
+                currentColorIndex = nextColorIndex;
+                platformRenderer.material.color = colors[currentColorIndex].color;
+                timeRemaining = colorChangeInterval;
+                UpdateNextColorIndicator();
             }
         }
     }
@@ -68,16 +74,14 @@ public class ColorChanger : MonoBehaviour
         }
     }
 
-    private void UpdateNextMaterialIndicator()
+    private void UpdateNextColorIndicator()
     {
-        //if (nextMaterialIndicator != null)
+        if (nextColorIndicator != null)
         {
-            nextMaterialIndex = Random.Range(0,materials.Length);
-            transform.Find("NextColor/Arrow/Triangle").GetComponent<Renderer>().material.color = materials[nextMaterialIndex].color;
-            transform.Find("NextColor/Arrow/Square").GetComponent<Renderer>().material.color = materials[nextMaterialIndex].color;
-            //nextMaterialIndicator.GetComponent<Renderer>().material = materials[nextMaterialIndex];
-            //Debug.Log(nextMaterialIndex);
-            // You can set the position and other properties of the nextMaterialIndicator here.
+            nextColorIndex = Random.Range(0, colors.Count);
+            //nextColorIndicator.GetComponent<Renderer>().material.color = colors[nextColorIndex].color;
+            nextColorIndicator.transform.Find("Square").GetComponent<Renderer>().material.color = colors[nextColorIndex].color;
+            nextColorIndicator.transform.Find("Triangle").GetComponent<Renderer>().material.color = colors[nextColorIndex].color;
         }
     }
 
@@ -104,8 +108,6 @@ public class ColorChanger : MonoBehaviour
                 floatTransform.position = Vector3.MoveTowards(transform.position, targetDownPosition, floatSpeed * Time.deltaTime);
                 yield return null;
             }
-
-            // Repeat the loop.
         }
     }
 }

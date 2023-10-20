@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301577539959142225}
   serializedVersion: 2
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 1.71, y: 1.6, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalPosition: {x: 1.71, y: 1.6000004, z: 0.000000038387793}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1303506764416011782}
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!212 &6282824874828949735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6b2cb0a50233f4419ba8a164c6fb3573, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +140,7 @@ SpriteShapeRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6b2cb0a50233f4419ba8a164c6fb3573, type: 2}
   - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -300,15 +300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4068be29df6486daf857d241c202de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 0171cb073c68f4e62b1bc937012f3f2b, type: 2}
-  - {fileID: 2100000, guid: 53df3b4ef9e834163b73876a0ffe7599, type: 2}
-  - {fileID: 2100000, guid: 69b463403b34a4d43a222f69a8c71502, type: 2}
-  - {fileID: 2100000, guid: e56768c3da2b84a92bde2714c4cacbce, type: 2}
-  - {fileID: 2100000, guid: 79616e539037644868af887c4f566e79, type: 2}
-  materialChangeInterval: 15
+  colors: []
+  colorChangeInterval: 15
   timerText: {fileID: 5721886438109163450}
-  nextMaterialIndicator: {fileID: 5711793280386864434}
+  nextColorIndicator: {fileID: 0}
   floatTransform: {fileID: 6903154744759276345}
   floatHeight: 1
   floatSpeed: 1
@@ -527,7 +522,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6b2cb0a50233f4419ba8a164c6fb3573, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
