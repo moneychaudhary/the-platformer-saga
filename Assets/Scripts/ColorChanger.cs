@@ -32,6 +32,7 @@ public class ColorChanger : MonoBehaviour
 
     private void Start()
     {
+        floatTransform.gameObject.SetActive(false);
         platformRenderer = GetComponent<SpriteShapeRenderer>();
         currentColorIndex = Random.Range(0, colors.Count);
         platformRenderer.material.color = colors[currentColorIndex].color;
@@ -55,6 +56,8 @@ public class ColorChanger : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timeRemaining -= 1f;
             UpdateTimerText();
+
+            if(timeRemaining <= 3f) floatTransform.gameObject.SetActive(true);
 
             if (timeRemaining <= 0f)
             {
@@ -82,6 +85,7 @@ public class ColorChanger : MonoBehaviour
             //nextColorIndicator.GetComponent<Renderer>().material.color = colors[nextColorIndex].color;
             nextColorIndicator.transform.Find("Square").GetComponent<Renderer>().material.color = colors[nextColorIndex].color;
             nextColorIndicator.transform.Find("Triangle").GetComponent<Renderer>().material.color = colors[nextColorIndex].color;
+            floatTransform.gameObject.SetActive(false);
         }
     }
 
