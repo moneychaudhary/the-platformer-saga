@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class PlayerAimHand : MonoBehaviour
 {
     private Transform aimTransform;
+    float fireRate;
+    float nextFire;
     private Transform aimGunEndPoint;
     public Text bulletCountText;
     public int bulletCount;
@@ -25,16 +27,17 @@ public class PlayerAimHand : MonoBehaviour
     private BoxCollider2D boxCollider;
     private void Start()
     {
+        fireRate = 0.45f;
+        nextFire = Time.time;
         bulletCount = 30;
         bulletCountText.text = bulletCount.ToString();
     }
     private void Awake()
-    {
-        
+    { 
         aimTransform = transform.Find("Aim");
         aimGunEndPoint = aimTransform.Find("GunEndPoint");
         Debug.Log(aimGunEndPoint);
-}
+    }
 
     private void Update()
     {
@@ -61,8 +64,11 @@ public class PlayerAimHand : MonoBehaviour
                 gunEndPointPosition = aimGunEndPoint.position,
                 shootPosition = mousePosition,
             });
-            shoot();
-            
+            if (Time.time > nextFire)
+            {
+                shoot();
+                nextFire = Time.time + fireRate;
+            }
         }
     }
 
