@@ -26,6 +26,6 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame() {
-         SceneManager.LoadScene("Home");
+         SceneManager.LoadScene("Level 1");
     }
 }
