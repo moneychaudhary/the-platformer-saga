@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Trap
+  - Bullet
+  - EnemyHealth
   layers:
   - Default
   - TransparentFX
