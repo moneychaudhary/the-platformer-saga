@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 6f;
     [SerializeField] private float jump = 8f;
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private LayerMask jumpablePlatform;
     private BoxCollider2D boxCollider;
     private Rigidbody2D rigidBody;
 
@@ -39,6 +40,13 @@ public class PlayerMovement : MonoBehaviour
             Vector2.down,
             0.2f,
             jumpableGround
+        ) || Physics2D.BoxCast(
+            boxCollider.bounds.center,
+            boxCollider.bounds.size,
+            0f,
+            Vector2.down,
+            0.2f,
+            jumpablePlatform
         );
     }
 }
