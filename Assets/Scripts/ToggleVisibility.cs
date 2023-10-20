@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ToggleVisibility : MonoBehaviour
 {
@@ -48,7 +49,11 @@ public class ToggleVisibility : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(StartDisappearTimer());
-            Debug.Log("Player hitting platform");
+            // Debug.Log("Player hitting platform");
+            if(Math.Round(rend.material.color.r, 2) == 1.0 && Math.Round(rend.material.color.g, 2) == 0 && Math.Round(rend.material.color.b, 2) == 0 && Math.Round(rend.material.color.a, 2) == 0) {
+                if(Health.playerHealth < 1.0f)
+                    Health.playerHealth += 0.2f;
+            }
         }
     }
 
@@ -58,7 +63,7 @@ public class ToggleVisibility : MonoBehaviour
         disappearDelay = 3f;
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player not hitting platform");
+            // Debug.Log("Player not hitting platform");
         }
     }
 
