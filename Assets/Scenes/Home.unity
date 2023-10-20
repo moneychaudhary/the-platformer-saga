@@ -1013,8 +1013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654051ad0d47e4a6785c4cfdf3b3507c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jump: 8
+  speed: 7
+  jump: 10
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
@@ -1169,11 +1169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.47
+      value: -23.42
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.5
+      value: -9.27
       objectReference: {fileID: 0}
     - target: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_LocalPosition.z
