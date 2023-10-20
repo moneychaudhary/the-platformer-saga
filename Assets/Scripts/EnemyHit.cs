@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyHit : MonoBehaviour
 {
+    public EnemyHealthBar enemyHealthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class EnemyHit : MonoBehaviour
         if (collision.gameObject.tag == "Bullet") {
             Debug.Log("Enemy hit!");
             Destroy(collision.gameObject);
-            Damage(0.1f);
+            enemyHealthBar.Damage(0.1f);
         }
     }
 

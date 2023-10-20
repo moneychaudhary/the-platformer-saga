@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 35450189}
   - component: {fileID: 35450191}
   - component: {fileID: 35450190}
+  - component: {fileID: 35450192}
   m_Layer: 0
   m_Name: Bar
   m_TagString: EnemyHealth
@@ -198,6 +199,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35450188}
   m_CullTransparentMesh: 1
+--- !u!114 &35450192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35450188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd81ec4ab61d9964085b130e4a1223ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &201170416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,6 +3880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f1230092d92040a0311afbfea667d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealthBar: {fileID: 35450192}
 --- !u!1 &2119144861
 GameObject:
   m_ObjectHideFlags: 0
