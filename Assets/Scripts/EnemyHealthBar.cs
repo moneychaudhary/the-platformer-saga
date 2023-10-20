@@ -30,7 +30,16 @@ public class EnemyHealthBar : MonoBehaviour
 
         if(Health.enemyHealth == 0f) {
             Debug.Log("Enemy died!");
-            SceneManager.LoadScene("Finish");
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "Level 1") {
+                SceneManager.LoadScene("NextLevel2");
+            }
+            if (scene.name == "Level 2") {
+                SceneManager.LoadScene("NextLevel3");
+            }
+            if (scene.name == "Home") {
+                SceneManager.LoadScene("Finish");
+            }
         }
 
         UpdateHealthBar(Health.enemyHealth);

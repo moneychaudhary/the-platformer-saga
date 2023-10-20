@@ -548,7 +548,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1257016162}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: ReloadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -678,9 +678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'GAME COMPLETED
-
-'
+  m_Text: GAME COMPLETED
 --- !u!222 &1832064185
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -759,7 +757,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TRY AGAIN!
+  m_Text: PLAY AGAIN!
 --- !u!222 &2124758550
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -25,7 +25,19 @@ public class GameController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
     }
 
-    public void StartGame() {
+    public void ReloadGame() {
+         SceneManager.LoadScene("Start");
+    }
+
+    public void StartLevel1() {
          SceneManager.LoadScene("Level 1");
+    }
+
+    public void StartLevel2() {
+         SceneManager.LoadScene("Level 2");
+    }
+
+    public void StartLevel3() {
+         SceneManager.LoadScene("Home");
     }
 }
