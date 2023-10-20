@@ -10,6 +10,7 @@ public class PlayerAimHand : MonoBehaviour
     private Transform aimTransform;
     float fireRate;
     float nextFire;
+    float reloadNextFire;
     private Transform aimGunEndPoint;
     public Text bulletCountText;
     public int bulletCount;
@@ -29,6 +30,7 @@ public class PlayerAimHand : MonoBehaviour
     {
         fireRate = 0.45f;
         nextFire = Time.time;
+        reloadNextFire = Time.time;
         bulletCount = 30;
         bulletCountText.text = bulletCount.ToString();
     }
@@ -43,6 +45,7 @@ public class PlayerAimHand : MonoBehaviour
     {
         HandleAim();
         HandleShooting();
+        HandleReload();
     }
 
     private void HandleAim()
@@ -68,6 +71,33 @@ public class PlayerAimHand : MonoBehaviour
             {
                 shoot();
                 nextFire = Time.time + fireRate;
+            }
+        }
+    }
+
+    public void HandleReload()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+        RaycastHit2D hit = Physics2D.BoxCast(
+            boxCollider.bounds.center,
+            boxCollider.bounds.size,
+            0f,
+            Vector2.down,
+            0.2f,
+            platform);
+        if (hit)
+        {
+            Color tempColor = hit.transform.GetComponent<Renderer>().material.color;
+            Debug.Log("Reload!" + tempColor.r + " " + tempColor.g + " " + tempColor.b + " " + tempColor.a);
+            if (Math.Round(tempColor.r, 2) == 0 && Math.Round(tempColor.g, 2) == 0.5 && Math.Round(tempColor.b, 2) == 0 && Math.Round(tempColor.a, 2) == 0)
+            {
+                if(Time.time > reloadNextFire)
+                {
+                    Debug.Log("Reload!");
+                    bulletCount = Math.Min(bulletCount + 3, 30);
+                    bulletCountText.text = bulletCount.ToString();
+                    reloadNextFire = Time.time + 1.0f;
+                }
             }
         }
     }
