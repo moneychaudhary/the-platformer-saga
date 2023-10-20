@@ -12,9 +12,7 @@ public class FireBullet : MonoBehaviour
     }
 
 
-    private void PlayerAimHand_OnShoot(object sender, PlayerAimHand.OnShootEventArgs e)
-    {
-        Debug.Log("I am here");
+    private void PlayerAimHand_OnShoot(object sender, PlayerAimHand.OnShootEventArgs e) {
     }
 
 
