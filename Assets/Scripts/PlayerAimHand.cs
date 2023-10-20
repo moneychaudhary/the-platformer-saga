@@ -8,6 +8,7 @@ public class PlayerAimHand : MonoBehaviour
 {
     private Transform aimTransform;
     private Transform aimGunEndPoint;
+    [SerializeField] public LayerMask platform;
     public event EventHandler<OnShootEventArgs> OnShoot;
     public class OnShootEventArgs : EventArgs
     {
@@ -17,6 +18,8 @@ public class PlayerAimHand : MonoBehaviour
     public int speed = 3;
     public GameObject BulletPrefab;
     public GameObject startLocation;
+    private Color bulletColor;
+    private BoxCollider2D boxCollider;
     private void Awake()
     {
         aimTransform = transform.Find("Aim");
@@ -50,19 +53,46 @@ public class PlayerAimHand : MonoBehaviour
                 shootPosition = mousePosition,
             });
             shoot();
+            
         }
     }
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+        
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        Debug.Log("hekko");
+    //        bulletColor = collision.gameObject.GetComponent<Renderer>().material.color;
+    //        shoot();
+    //        Debug.Log(bulletColor);
+    //    }
+            
+        
+    //}
+
     public void shoot()
     {
-        Debug.Log(aimGunEndPoint.position);
-        Debug.Log(startLocation.transform.position);
-        Debug.Log(startLocation.transform.rotation);
-        GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z  - 90)));
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        SpriteRenderer bulletSprite = bullet.GetComponent<SpriteRenderer>();
-        bulletSprite.color = Color.red;
-        rb.velocity = startLocation.transform.right * speed;
+        boxCollider = GetComponent<BoxCollider2D>();
+        RaycastHit2D hit = Physics2D.BoxCast(
+            boxCollider.bounds.center,
+            boxCollider.bounds.size,
+            0f,
+            Vector2.down,
+            0.2f,
+            platform);
+        if (hit)
+        {
+            GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z - 90)));
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            Renderer bulletSprite = bullet.GetComponent<Renderer>();
+            bulletColor = hit.transform.GetComponent<Renderer>().material.color;
+            Debug.Log(bulletColor);
+            bulletSprite.material.color = bulletColor;
+            
+            rb.velocity = startLocation.transform.right * speed;
+        }
+            
     }
 
 }
