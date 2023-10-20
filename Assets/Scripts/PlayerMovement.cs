@@ -24,10 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
        float x = Input.GetAxisRaw("Horizontal");
        rigidBody.velocity = new Vector2(x * speed, rigidBody.velocity.y);
-
-        Debug.Log(IsGrounded());
         
-        if (Input.GetButtonDown("Jump") && IsGrounded()) {
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && IsGrounded()) {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jump);
         }
     }
