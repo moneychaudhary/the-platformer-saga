@@ -13,7 +13,7 @@ public class PlayerAimHand : MonoBehaviour
     float reloadNextFire;
     private Transform aimGunEndPoint;
     public Text bulletCountText;
-    public int bulletCount;
+    public int bulletCount = 30;
     [SerializeField] public LayerMask platform;
     public event EventHandler<OnShootEventArgs> OnShoot;
     public class OnShootEventArgs : EventArgs
@@ -31,7 +31,6 @@ public class PlayerAimHand : MonoBehaviour
         fireRate = 0.45f;
         nextFire = Time.time;
         reloadNextFire = Time.time;
-        bulletCount = 30;
         bulletCountText.text = bulletCount.ToString();
     }
     private void Awake()
