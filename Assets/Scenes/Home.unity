@@ -1304,7 +1304,7 @@ MonoBehaviour:
   platform:
     serializedVersion: 2
     m_Bits: 24
-  speed: 15
+  speed: 17
   BulletPrefab: {fileID: 7172550173238294394, guid: 4ee5f2e30fe7e44c3b65eec215cd95cf, type: 3}
   startLocation: {fileID: 793988324}
 --- !u!212 &703143139
@@ -7384,7 +7384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freq: 6
-  amp: 10
+  amp: 7
 --- !u!114 &1946947419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7411,7 +7411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  BulletPrefab: {fileID: 7172550173238294394, guid: 4ee5f2e30fe7e44c3b65eec215cd95cf, type: 3}
+  BulletPrefab: {fileID: 2366104690019359147, guid: 747fa4aa62a7a449e971e823b3a009e1, type: 3}
   startLocation: {fileID: 386426386}
   targetPlayer: {fileID: 703143137}
 --- !u!114 &1946947421

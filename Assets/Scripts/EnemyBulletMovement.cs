@@ -14,7 +14,7 @@ public class EnemyBulletMovement : MonoBehaviour
     Vector2 moveDir;
     void Start()
     {
-        fireRate = 1f;
+        fireRate = 1.2f;
         nextFire = Time.time;
     }
 
