@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 105741364}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: StartLevel3
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2111,7 +2111,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1553820678}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: StartLevel1
+        m_MethodName: StartLevel2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2738,7 +2738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1962574508}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: StartLevel2
+        m_MethodName: StartLevel3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
