@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
 
+    public bool canJump = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,8 +25,7 @@ public class PlayerController : MonoBehaviour
 
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        // Check if the player is trying to jump
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && canJump && Input.GetButtonDown("Jump"))
         {
             // Apply jump force
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

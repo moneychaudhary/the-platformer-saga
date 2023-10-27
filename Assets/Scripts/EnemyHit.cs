@@ -23,11 +23,16 @@ public class EnemyHit : MonoBehaviour
         if (collision.gameObject.tag == "Bullet") {
             Color bulletColor = collision.gameObject.GetComponent<Renderer>().material.color;
             Color enemyColor = transform.GetComponent<Renderer>().material.color;
-            if (bulletColor == enemyColor || enemyColor == Color.blue)
+            if (bulletColor == enemyColor)
             {
                 enemyHealthBar.Damage(0.1f);
             }
 
+            else if (enemyColor == Color.blue)
+            {
+                enemyHealthBar.Damage(0.05f);
+            }
+            
             if(Math.Round(bulletColor.r, 2) == 0.68 && Math.Round(bulletColor.g, 2) == 0.85 && Math.Round(bulletColor.b, 2) == 0.9 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("Freeze!");
                 StartCoroutine(Freeze());

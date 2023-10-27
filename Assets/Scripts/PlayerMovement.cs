@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Rigidbody2D rigidBody;
 
+    public bool canJump = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
        float x = Input.GetAxisRaw("Horizontal");
        rigidBody.velocity = new Vector2(x * speed, rigidBody.velocity.y);
         
-        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && IsGrounded()) {
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && IsGrounded() && canJump) {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jump);
         }
     }
