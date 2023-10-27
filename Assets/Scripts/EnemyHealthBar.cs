@@ -38,7 +38,7 @@ public class EnemyHealthBar : MonoBehaviour
             }
             if (scene.name == "Tutorial-Level3")
             {
-                SceneManager.LoadScene("NextLevel2");
+                SceneManager.LoadScene("Start");
             }
             if (scene.name == "Level 1") {
                 SceneManager.LoadScene("NextLevel2");

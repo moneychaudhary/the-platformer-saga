@@ -29,6 +29,10 @@ public class GameController : MonoBehaviour
          SceneManager.LoadScene("Start");
     }
 
+    public void PlayTutorial() {
+         SceneManager.LoadScene("Tutorial-Level 1");
+    }
+
     public void SelectLevel() {
          SceneManager.LoadScene("SelectLevel");
     }
