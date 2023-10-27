@@ -32,6 +32,14 @@ public class EnemyHealthBar : MonoBehaviour
             Debug.Log("Enemy died!");
             Health.enemyHealth = 1f;
             Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "Tutorisl-Level2")
+            {
+                SceneManager.LoadScene("Tutorial-Level3");
+            }
+            if (scene.name == "Tutorial-Level3")
+            {
+                SceneManager.LoadScene("NextLevel2");
+            }
             if (scene.name == "Level 1") {
                 SceneManager.LoadScene("NextLevel2");
             }
