@@ -91,7 +91,7 @@ public class PlayerAimHand : MonoBehaviour
             Color tempColor = hit.transform.GetComponent<Renderer>().material.color;
             if (Math.Round(tempColor.r, 2) == 0 && Math.Round(tempColor.g, 2) == 0.5 && Math.Round(tempColor.b, 2) == 0 && Math.Round(tempColor.a, 2) == 0)
             {
-                transform.GetComponent<PlayerMovement>().canJump = false;
+                transform.GetComponent<PlayerMovement>().canJump = true;
                 if (Time.time > reloadNextFire)
                 {
                     bulletCount = Math.Min(bulletCount + 3, 30);
