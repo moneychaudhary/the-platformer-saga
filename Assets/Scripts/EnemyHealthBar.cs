@@ -41,48 +41,46 @@ public class EnemyHealthBar : MonoBehaviour
             }
             else
             {
-                GameObject analytics = GameObject.Find("Analytics");
-            Debug.Log("Enemy died!");
-            Health.enemyHealth = 1f;
-            Scene scene = SceneManager.GetActiveScene();
-                    Debug.Log(scene.name);
-            if (scene.name == "Tutorisl-Level2")
-            {
-                SceneManager.LoadScene("Tutorial-Level3");
-            }
-            if (scene.name == "Tutorial-Level3")
-            {
-                SceneManager.LoadScene("Start");
-            }
-            if (scene.name == "Level 1") {
+                GameObject analytics = GameObject.Find("Analytics");;
+                Health.enemyHealth = 1f;
+                Scene scene = SceneManager.GetActiveScene();
+                if (scene.name == "Tutorisl-Level2")
+                {
+                    SceneManager.LoadScene("Tutorial-Level3");
+                }
+                if (scene.name == "Tutorial-Level3")
+                {
+                    SceneManager.LoadScene("Start");
+                }
+                if (scene.name == "Level 1") {
 
-                 Debug.Log("Level1 Time" + elapsedTime);
+                     Debug.Log("Level1 Time" + elapsedTime);
 
-                 if (analytics)
-                 {
-                   analytics.GetComponent<GoogleFormUploader>().RecordData("entry.2006131830", (int)elapsedTime);
-                 }
-                 SceneManager.LoadScene("NextLevel2");
-            }
-            if (scene.name == "Level 2") {
+                     if (analytics)
+                     {
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.2006131830", (int)elapsedTime);
+                     }
+                     SceneManager.LoadScene("NextLevel2");
+                }
+                if (scene.name == "Level 2") {
 
-                        if (analytics)
-                        {
-                            analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1328253810", (int)elapsedTime);
-                        }
-                        SceneManager.LoadScene("NextLevel3");
-            }
-            if (scene.name == "Home") {
+                    if (analytics)
+                     {
+                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1328253810", (int)elapsedTime);
+                     }
+                     SceneManager.LoadScene("NextLevel3");
+                }
+                if (scene.name == "Home") {
 
-                        Debug.Log("Level3 Time " + elapsedTime);
+                    Debug.Log("Level3 Time " + elapsedTime);
 
-                        if (analytics)
-                        {
-                            analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
-                        }
+                     if (analytics)
+                     {
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
+                     }
 
-                        SceneManager.LoadScene("Finish");
-            }
+                     SceneManager.LoadScene("Finish");
+                }
                 Health.enemyHealth = 1f;
                 enemyDeathTime = Time.time;
                 Debug.Log("Enemy died! Time to death: " + (enemyDeathTime - levelStartTime) + " seconds");
