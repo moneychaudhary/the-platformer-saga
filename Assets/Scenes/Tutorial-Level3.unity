@@ -480,7 +480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hop on the Green Platform to Reload Bullet
+  m_Text: Hop on the Green Platform to Reload Bullet and Kill enemy
 --- !u!222 &346054612
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1295,6 +1295,7 @@ MonoBehaviour:
   jumpablePlatform:
     serializedVersion: 2
     m_Bits: 8
+  canJump: 1
 --- !u!114 &703143145
 MonoBehaviour:
   m_ObjectHideFlags: 0
