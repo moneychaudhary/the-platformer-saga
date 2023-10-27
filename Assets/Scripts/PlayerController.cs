@@ -22,11 +22,32 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
         float horizontalInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
+        // Check if the player is trying to jump
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
+            // Apply jump force
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+
+        // Check if the player is in contact with a platform's edge
+        if (!isGrounded)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1.0f, groundLayer);
+
+            if (hit.collider != null)
+            {
+                float angle = Vector2.Angle(hit.normal, Vector2.up);
+
+                // If the angle is too steep, stop the vertical movement
+                if (angle > 45)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+                }
+            }
+        }
+
+        // Handle horizontal movement
+        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
     }
 }
