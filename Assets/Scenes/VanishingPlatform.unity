@@ -300,6 +300,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  canJump: 1
 --- !u!1 &286844675
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,9 +581,9 @@ GameObject:
   - component: {fileID: 632926987}
   - component: {fileID: 632926986}
   - component: {fileID: 632926989}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
