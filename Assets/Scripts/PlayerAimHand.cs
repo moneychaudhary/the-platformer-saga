@@ -82,7 +82,7 @@ public class PlayerAimHand : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("BulletReload")) {
             Destroy(collision.gameObject);
-            HandleReload();
+             HandleReload();
         }
         if (collision.gameObject.CompareTag("HealthReload")) {
             Destroy(collision.gameObject);
