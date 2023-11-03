@@ -51,7 +51,7 @@ public class EnemyHit : MonoBehaviour
         GetComponent<EnemyMoveUpDown>().enabled = false;
         GetComponent<EnemyBulletMovement>().enabled = false;
         // GetComponent<Renderer>().material.color = Color.blue;
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(6.57f);
         GetComponent<EnemyMoveUpDown>().enabled = true;
         GetComponent<EnemyBulletMovement>().enabled = true;
         Scene scene = SceneManager.GetActiveScene();
