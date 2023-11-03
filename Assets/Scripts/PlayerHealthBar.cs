@@ -50,6 +50,32 @@ public class PlayerHealthBar : MonoBehaviour
                     analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1606956756", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
                 }
             }
+            else if (scene.name == "Level 3")
+            {
+
+                if (analytics)
+                {
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1606956756", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                }
+            }
+            else if (scene.name == "Level 4")
+            {
+
+                if (analytics)
+                {
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.517618210", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                }
+            }
+            else if (scene.name == "Level 5")
+            {
+
+                if (analytics)
+                {
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.813673215", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                }
+            }
             else if (scene.name == "Home")
             {
 
