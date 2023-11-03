@@ -1303,6 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletCountText: {fileID: 18843952}
   bulletCount: 30
+  emptyBulletCount: 0
   platform:
     serializedVersion: 2
     m_Bits: 24
@@ -1483,6 +1484,7 @@ MonoBehaviour:
   jumpablePlatform:
     serializedVersion: 2
     m_Bits: 8
+  canJump: 1
 --- !u!114 &703143145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4751,7 +4753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
+  - {fileID: 9010870804866396222, guid: d8156747b68a243ce9c1f4d40855430c, type: 3}
   - {fileID: 8692973187373753366, guid: c36ce8652794c49588b29ef404717c65, type: 3}
+  - {fileID: 9010870804866396222, guid: d8156747b68a243ce9c1f4d40855430c, type: 3}
+  - {fileID: 8692973187373753366, guid: c36ce8652794c49588b29ef404717c65, type: 3}
+  - {fileID: 9010870804866396222, guid: d8156747b68a243ce9c1f4d40855430c, type: 3}
   - {fileID: 9010870804866396222, guid: d8156747b68a243ce9c1f4d40855430c, type: 3}
 --- !u!1 &1582738946
 GameObject:
@@ -7451,6 +7457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealthBar: {fileID: 35450192}
+  damage: 0.1
 --- !u!114 &1946947420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7463,6 +7470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed7e3b3fc6d74f7783afcff4f55db3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireRate: 1.2
   speed: 15
   BulletPrefab: {fileID: 2366104690019359147, guid: 747fa4aa62a7a449e971e823b3a009e1, type: 3}
   startLocation: {fileID: 386426386}
