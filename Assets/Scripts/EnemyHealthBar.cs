@@ -85,6 +85,32 @@ public class EnemyHealthBar : MonoBehaviour
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
                     }
 
+                     SceneManager.LoadScene("NextLevel4");
+                }
+                if (scene.name == "Level 4") {
+
+                    Debug.Log("Level3 Time " + elapsedTime);
+
+                     if (analytics)
+                     {
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                    }
+
+                     SceneManager.LoadScene("NextLevel5");
+                }
+                if (scene.name == "Level 5") {
+
+                    Debug.Log("Level3 Time " + elapsedTime);
+
+                     if (analytics)
+                     {
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                    }
+
                      SceneManager.LoadScene("Finish");
                 }
                 if (scene.name == "Home")

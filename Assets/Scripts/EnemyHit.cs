@@ -29,7 +29,7 @@ public class EnemyHit : MonoBehaviour
                 enemyHealthBar.Damage(damage);
             } else if (enemyColor == Color.blue)
             {
-                enemyHealthBar.Damage(0.05f);
+                enemyHealthBar.Damage(0.5 * damage);
             }
             
             if(Math.Round(bulletColor.r, 2) == 0.68 && Math.Round(bulletColor.g, 2) == 0.85 && Math.Round(bulletColor.b, 2) == 0.9 && Math.Round(bulletColor.a, 2) == 1.0) {
@@ -37,7 +37,7 @@ public class EnemyHit : MonoBehaviour
                 StartCoroutine(Freeze());
             } else if(Math.Round(bulletColor.r, 2) == 1.0 && Math.Round(bulletColor.g, 2) == 0.65 && Math.Round(bulletColor.b, 2) == 0 && Math.Round(bulletColor.a, 2) == 0.0) {
                 Debug.Log("Double Damage!");
-                enemyHealthBar.Damage(0.2f);
+                enemyHealthBar.Damage(2 * damage);
             } else if(Math.Round(bulletColor.r, 2) == 0.80 && Math.Round(bulletColor.g, 2) == 1.0 && Math.Round(bulletColor.b, 2) == 0.0 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("One HIT!");
                 enemyHealthBar.Damage(1.0f);
