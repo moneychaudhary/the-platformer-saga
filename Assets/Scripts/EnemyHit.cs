@@ -29,10 +29,10 @@ public class EnemyHit : MonoBehaviour
                 enemyHealthBar.Damage(damage);
             }
 
-            else if (enemyColor == Color.blue)
-            {
-                enemyHealthBar.Damage(0.05f);
-            }
+            // else if (enemyColor == Color.blue)
+            // {
+            //     enemyHealthBar.Damage(0.05f);
+            // }
             
             if(Math.Round(bulletColor.r, 2) == 0.68 && Math.Round(bulletColor.g, 2) == 0.85 && Math.Round(bulletColor.b, 2) == 0.9 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("Freeze!");
@@ -50,13 +50,10 @@ public class EnemyHit : MonoBehaviour
     private IEnumerator Freeze() {
         GetComponent<EnemyMoveUpDown>().enabled = false;
         GetComponent<EnemyBulletMovement>().enabled = false;
-        GetComponent<Renderer>().material.color = Color.blue;
-        yield return new WaitForSeconds(5f);
+        // GetComponent<Renderer>().material.color = Color.blue;
+        yield return new WaitForSeconds(7f);
         GetComponent<EnemyMoveUpDown>().enabled = true;
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Home") {
-            GetComponent<EnemyBulletMovement>().enabled = true;
-        }
         GetComponent<Renderer>().material.color = Color.red;
     }
 
