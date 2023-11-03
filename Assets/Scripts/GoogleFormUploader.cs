@@ -6,6 +6,8 @@ public class GoogleFormUploader : MonoBehaviour
 {
     [SerializeField] private string googleFormURL; // Paste the Google Form URL here
 
+    public int dissapearCount = 0;
+
     public void RecordData(string dataToRecord,int analyticAbilty)
     {
         StartCoroutine(UploadData(dataToRecord, analyticAbilty));

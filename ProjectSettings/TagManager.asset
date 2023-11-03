@@ -8,6 +8,8 @@ TagManager:
   - Trap
   - Bullet
   - EnemyHealth
+  - BulletReload
+  - HealthReload
   layers:
   - Default
   - TransparentFX

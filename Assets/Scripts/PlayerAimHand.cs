@@ -14,6 +14,8 @@ public class PlayerAimHand : MonoBehaviour
     private Transform aimGunEndPoint;
     public Text bulletCountText;
     public int bulletCount = 30;
+    public int emptyBulletCount = 0;
+    bool emptyBullet = false;
     [SerializeField] public LayerMask platform;
     public event EventHandler<OnShootEventArgs> OnShoot;
     public class OnShootEventArgs : EventArgs
@@ -26,7 +28,7 @@ public class PlayerAimHand : MonoBehaviour
     public GameObject startLocation;
     private Color bulletColor;
     private BoxCollider2D boxCollider;
-    public int[] abilityCount = new int[5];
+    public int[] abilityCount = new int[3];
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class PlayerAimHand : MonoBehaviour
         nextFire = Time.time;
         reloadNextFire = Time.time;
         bulletCountText.text = bulletCount.ToString();
+        emptyBulletCount = 0;
     }
     private void Awake()
     { 
@@ -46,7 +49,7 @@ public class PlayerAimHand : MonoBehaviour
     {
         HandleAim();
         HandleShooting();
-        HandleReload();
+        HandleEmptyBullet();
     }
 
     private void HandleAim()
@@ -76,33 +79,48 @@ public class PlayerAimHand : MonoBehaviour
         }
     }
 
-    public void HandleReload()
-    {
-        boxCollider = GetComponent<BoxCollider2D>();
-        RaycastHit2D hit = Physics2D.BoxCast(
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("BulletReload")) {
+            Destroy(collision.gameObject);
+             HandleReload();
+        }
+        if (collision.gameObject.CompareTag("HealthReload")) {
+            Destroy(collision.gameObject);
+            HealthReload();
+        }
+        if(collision.gameObject.CompareTag("Ground")) {
+            boxCollider = GetComponent<BoxCollider2D>();
+            RaycastHit2D hit = Physics2D.BoxCast(
             boxCollider.bounds.center,
             boxCollider.bounds.size,
             0f,
             Vector2.down,
             0.2f,
             platform);
-        if (hit)
-        {
-            Color tempColor = hit.transform.GetComponent<Renderer>().material.color;
-            if (Math.Round(tempColor.r, 2) == 0 && Math.Round(tempColor.g, 2) == 0.5 && Math.Round(tempColor.b, 2) == 0 && Math.Round(tempColor.a, 2) == 0)
-            {
-                transform.GetComponent<PlayerMovement>().canJump = true;
-                if (Time.time > reloadNextFire)
-                {
-                    bulletCount = Math.Min(bulletCount + 3, 30);
+            if(Math.Round(hit.transform.GetComponent<Renderer>().material.color.r, 2) == 0.80 && 
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.g, 2) == 1.0 && 
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.b, 2) == 0.0 && 
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.a, 2) == 1.0) {
+                Debug.Log("One Hit KO!");
+                if(bulletCount > 1) {
+                    bulletCount = 1;
                     bulletCountText.text = bulletCount.ToString();
-                    reloadNextFire = Time.time + 1.0f;
                 }
             }
         }
-        else
+    }
+
+    public void HandleReload()
+    {
+       bulletCount = Math.Min(bulletCount + 3, 30);
+       bulletCountText.text = bulletCount.ToString();
+    }
+
+    public void HealthReload()
+    {
+        if(Health.playerHealth < 1.0f)
         {
-            transform.GetComponent<PlayerMovement>().canJump = true;
+           Health.playerHealth = Math.Min(Health.playerHealth + 0.2f, 1.0f);
         }
     }
 
@@ -138,10 +156,8 @@ public class PlayerAimHand : MonoBehaviour
             switch(abilityName)
             {
                 case "Freeze_Enemy": formEntry = "entry.65825415"; analyticAbilty = ++abilityCount[0];  ; break;
-                case "Gain_Bullet": formEntry = "entry.898798054"; analyticAbilty = ++abilityCount[1]; break;
-                case "Double_Damage": formEntry = "entry.1750617544"; analyticAbilty = ++abilityCount[2]; ; break;
-                case "Gain_Health": formEntry = "entry.1606122053"; analyticAbilty = ++abilityCount[3]; break;
-                case "Immune": formEntry = "entry.394612529"; analyticAbilty = ++abilityCount[4]; break;
+                case "Double_Damage": formEntry = "entry.1750617544"; analyticAbilty = ++abilityCount[1]; ; break;
+                case "One-Hit KO": formEntry = "entry.1606122053"; analyticAbilty = ++abilityCount[2]; break;
                 default: break;
             }
 
@@ -159,6 +175,15 @@ public class PlayerAimHand : MonoBehaviour
             {
                 analytics.GetComponent<GoogleFormUploader>().RecordData(formEntry,analyticAbilty);
             }
+        }
+    }
+
+    void HandleEmptyBullet()
+    {
+        if(!emptyBullet &&  bulletCount<=0)
+        {
+            emptyBulletCount++;
+            emptyBullet = !emptyBullet;
         }
     }
 

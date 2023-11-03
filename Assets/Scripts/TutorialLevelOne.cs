@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TutorialLevelOne : MonoBehaviour
 {
     private Color bulletColor;
     private BoxCollider2D boxCollider;
+    public GameObject arrow;
+    public GameObject enemy;
+    public GameObject enemyHealth;
+    public GameObject aimAndShoot;
     [SerializeField] public LayerMask platform;
+    public Text instructionText;
+    public TutorialLevel1Script script;
 
     // Update is called once per frame
     void Update()
@@ -32,7 +39,11 @@ public class TutorialLevelOne : MonoBehaviour
             if (bulletColor!= null && Math.Round(bulletColor.r, 2) == 1.0 && Math.Round(bulletColor.g, 2) == 0.34 && Math.Round(bulletColor.b, 2) == 0.2 && Math.Round(bulletColor.a, 2) == 1.0)
             {
                 Debug.Log(bulletColor);
-                SceneManager.LoadScene("Tutorisl-Level2");
+                arrow.SetActive(false);
+                enemy.SetActive(true);
+                aimAndShoot.SetActive(true);
+                enemyHealth.SetActive(true);
+                instructionText.text = "Shoot the enemy by hopping to enemy colored platform.";
             }
         }
     }
