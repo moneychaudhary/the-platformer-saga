@@ -4,38 +4,53 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
 using UnityEngine.U2D;
+using System.Linq;
 
 public class ColorChanger : MonoBehaviour
 {
-    public List<ColorData> colors = new List<ColorData>(); // List of color data.
+    public enum PlatType
+    {
+        Regular,
+        Boost,
+        Special
+    }
+
+    public List<ColorData> colors = new List<ColorData>();
     private SpriteShapeRenderer platformRenderer;
     public int currentColorIndex;
     private float timeRemaining;
     public float colorChangeInterval = 15f;
 
-    public TextMesh timerText; // Reference to the TextMesh component for displaying the timer.
-    public GameObject nextColorIndicator; // Reference to the GameObject representing the next color indicator.
+    // Define the frequencies for each PlatType.
+    public float regularFrequency = 0.7f; // Very frequent
+    public float boostFrequency = 0.2f;  // Less frequent
+    public float specialFrequency = 0.1f; // Very rare
+
+    public TextMesh timerText;
+    public GameObject nextColorIndicator;
     private int nextColorIndex;
 
     public Transform floatTransform;
-    public float floatHeight = 1.0f; // The height of the float movement.
-    public float floatSpeed = 1.0f; // The speed of the float movement.
-
-    private Vector3 initialPosition; // Store the initial position of the object.
+    public float floatHeight = 1.0f;
+    public float floatSpeed = 1.0f;
+    private Vector3 initialPosition;
 
     [System.Serializable]
     public class ColorData
     {
         public string colorName;
         public Color color;
+        public PlatType platType;
     }
 
     private void Start()
     {
         floatTransform.gameObject.SetActive(false);
         platformRenderer = GetComponent<SpriteShapeRenderer>();
-        currentColorIndex = Random.Range(0, colors.Count);
-        platformRenderer.material.color = colors[currentColorIndex].color;
+
+        // Initialize the platform color based on the selected PlatType.
+        InitializePlatformColor();
+
         timeRemaining = colorChangeInterval;
         UpdateTimerText();
         UpdateNextColorIndicator();
@@ -49,6 +64,51 @@ public class ColorChanger : MonoBehaviour
         StartCoroutine(FloatObject());
     }
 
+    private void InitializePlatformColor()
+    {
+        // Calculate the total frequency.
+        float totalFrequency = regularFrequency + boostFrequency + specialFrequency;
+
+        // Generate a random value to determine the PlatType.
+        float randomValue = Random.value * totalFrequency;
+
+        // Determine the PlatType based on the random value.
+        if (randomValue < regularFrequency)
+        {
+            currentColorIndex = GetRandomColorIndex(PlatType.Regular);
+        }
+        else if (randomValue < regularFrequency + boostFrequency)
+        {
+            currentColorIndex = GetRandomColorIndex(PlatType.Boost);
+        }
+        else
+        {
+            currentColorIndex = GetRandomColorIndex(PlatType.Special);
+        }
+
+        // Set the platform color.
+        platformRenderer.material.color = colors[currentColorIndex].color;
+    }
+
+    private int GetRandomColorIndex(PlatType platType)
+    {
+        // Get a list of color indices that match the specified PlatType.
+        List<int> matchingIndices = colors.FindAll(data => data.platType == platType)
+                                           .Select(data => colors.IndexOf(data))
+                                           .ToList();
+
+        if (matchingIndices.Count == 0)
+        {
+            // No colors with the specified PlatType were found; fall back to a random color.
+            return Random.Range(0, colors.Count);
+        }
+
+        // Randomly select an index from the matching indices.
+        int randomIndex = matchingIndices[Random.Range(0, matchingIndices.Count)];
+
+        return randomIndex;
+    }
+
     private IEnumerator ChangeColor()
     {
         while (true)
@@ -57,7 +117,7 @@ public class ColorChanger : MonoBehaviour
             timeRemaining -= 1f;
             UpdateTimerText();
 
-            if(timeRemaining <= 3f) floatTransform.gameObject.SetActive(true);
+            if (timeRemaining <= 3f) floatTransform.gameObject.SetActive(true);
 
             if (timeRemaining <= 0f)
             {
