@@ -28,7 +28,7 @@ public class PlayerAimHand : MonoBehaviour
     public GameObject startLocation;
     private Color bulletColor;
     private BoxCollider2D boxCollider;
-    public int[] abilityCount = new int[5];
+    public int[] abilityCount = new int[3];
 
     private void Start()
     {
@@ -156,10 +156,8 @@ public class PlayerAimHand : MonoBehaviour
             switch(abilityName)
             {
                 case "Freeze_Enemy": formEntry = "entry.65825415"; analyticAbilty = ++abilityCount[0];  ; break;
-                case "Gain_Bullet": formEntry = "entry.898798054"; analyticAbilty = ++abilityCount[1]; break;
-                case "Double_Damage": formEntry = "entry.1750617544"; analyticAbilty = ++abilityCount[2]; ; break;
-                case "Gain_Health": formEntry = "entry.1606122053"; analyticAbilty = ++abilityCount[3]; break;
-                case "Immune": formEntry = "entry.394612529"; analyticAbilty = ++abilityCount[4]; break;
+                case "Double_Damage": formEntry = "entry.1750617544"; analyticAbilty = ++abilityCount[1]; ; break;
+                case "One-Hit KO": formEntry = "entry.1606122053"; analyticAbilty = ++abilityCount[2]; break;
                 default: break;
             }
 
