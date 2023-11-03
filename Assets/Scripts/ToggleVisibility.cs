@@ -43,6 +43,15 @@ public class ToggleVisibility : MonoBehaviour
         collide.enabled = isVisible;
     }
 
+     private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(StartDisappearTimer());
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         StopAllCoroutines();
