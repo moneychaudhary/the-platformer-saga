@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
     public GameObject [] objects;
-    public float respawnTime = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +20,7 @@ public class SpawnerScript : MonoBehaviour
     IEnumerator ObjectSpawner()
     {
         while(true) {
-            yield return new WaitForSeconds(respawnTime);
+            yield return new WaitForSeconds(Random.Range(4, 8));
             SpawnObject();
         }
     }
@@ -29,8 +28,8 @@ public class SpawnerScript : MonoBehaviour
     void SpawnObject()
     {
       int randomValue = Random.Range(0, objects.Length);
-      int randomX = Random.Range(-6, 6);
-      int randomY = Random.Range(-6, 6);
+      int randomX = Random.Range(-26, 8);
+      int randomY = Random.Range(-12, 12);
       Instantiate(objects[randomValue], new Vector2(randomX, randomY), Quaternion.identity);
     }
 }
