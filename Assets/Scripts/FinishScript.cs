@@ -19,5 +19,6 @@ public class FinishScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
        SceneManager.LoadScene("Finish");
+       Debug.Log("Finished");
     }
 }

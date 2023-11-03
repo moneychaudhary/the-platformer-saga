@@ -13,6 +13,7 @@ public class FireBullet : MonoBehaviour
 
 
     private void PlayerAimHand_OnShoot(object sender, PlayerAimHand.OnShootEventArgs e) {
+
     }
 
 
