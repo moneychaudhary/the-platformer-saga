@@ -15,7 +15,7 @@ public class TutorialLevel1Script : MonoBehaviour
     private Transform aimGunEndPoint;
     [SerializeField] public LayerMask platform;
 
-    public int speed = 15;
+    public int speed = 19;
     public GameObject BulletPrefab;
     public GameObject startLocation;
     private Color bulletColor;
