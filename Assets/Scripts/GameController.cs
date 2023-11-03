@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
     }
 
     public void StartLevel3() {
-         SceneManager.LoadScene("Home");
+         SceneManager.LoadScene("Level 3");
     }
 
 }

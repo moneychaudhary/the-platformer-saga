@@ -92,7 +92,7 @@ public class PlayerAimHand : MonoBehaviour
 
     public void HandleReload()
     {
-       bulletCount = Math.Min(bulletCount + 3, 30);
+       bulletCount = Math.Min(bulletCount + 5, 30);
        bulletCountText.text = bulletCount.ToString();
     }
 

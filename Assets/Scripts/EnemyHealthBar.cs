@@ -74,7 +74,7 @@ public class EnemyHealthBar : MonoBehaviour
                     }
                      SceneManager.LoadScene("NextLevel3");
                 }
-                if (scene.name == "Home") {
+                if (scene.name == "Level 3") {
 
                     Debug.Log("Level3 Time " + elapsedTime);
 
@@ -86,6 +86,20 @@ public class EnemyHealthBar : MonoBehaviour
                     }
 
                      SceneManager.LoadScene("Finish");
+                }
+                if (scene.name == "Home")
+                {
+
+                    Debug.Log("Home Time " + elapsedTime);
+
+                    if (analytics)
+                    {
+                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
+                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                    }
+
+                    SceneManager.LoadScene("Finish");
                 }
                 Health.enemyHealth = 1f;
                 enemyDeathTime = Time.time;
