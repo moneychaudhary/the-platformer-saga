@@ -478,6 +478,14 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -1676,7 +1684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.g
@@ -1684,7 +1692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.r
-      value: 1
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].color.a
@@ -1719,6 +1727,18 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].platType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -1740,7 +1760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].colorName
-      value: Freeze_Enemy
+      value: One-Hit KO
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].colorName
@@ -1945,7 +1965,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: nextColorIndicator
@@ -2033,15 +2053,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.b
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
-      propertyPath: colors.Array.data[5].color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.r
-      value: 0.5019608
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].color.a
@@ -2076,6 +2096,18 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -2097,7 +2129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].colorName
-      value: Color2
+      value: One-Hit KO
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].colorName
@@ -2308,7 +2340,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: nextColorIndicator
@@ -2396,15 +2428,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.b
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
-      propertyPath: colors.Array.data[5].color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.r
-      value: 0.5019608
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].color.a
@@ -2439,6 +2471,18 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -2460,7 +2504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].colorName
-      value: Color2
+      value: One-Hit KO
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].colorName
@@ -2586,7 +2630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: nextColorIndicator
@@ -2666,15 +2710,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.b
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
-      propertyPath: colors.Array.data[5].color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.r
-      value: 0.5019608
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].color.a
@@ -2709,6 +2753,18 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -2730,7 +2786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].colorName
-      value: Color2
+      value: One-Hit KO
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].colorName
@@ -2992,6 +3048,14 @@ PrefabInstance:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[7].color.r
       value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
@@ -3270,6 +3334,10 @@ PrefabInstance:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[7].color.r
       value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
@@ -3633,6 +3701,14 @@ PrefabInstance:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[7].color.r
       value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
@@ -4060,6 +4136,14 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -4207,7 +4291,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: nextColorIndicator
@@ -4295,15 +4379,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.b
-      value: 0.5019608
-      objectReference: {fileID: 0}
-    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
-      propertyPath: colors.Array.data[5].color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].color.r
-      value: 0.5019608
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].color.a
@@ -4338,6 +4422,18 @@ PrefabInstance:
       value: 0.6784314
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[5].platType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
       value: Double_Damage
       objectReference: {fileID: 0}
@@ -4359,7 +4455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[5].colorName
-      value: Color2
+      value: One-Hit KO
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[6].colorName
@@ -4659,6 +4755,10 @@ PrefabInstance:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[7].color.r
       value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
@@ -7263,6 +7363,14 @@ PrefabInstance:
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[7].color.r
       value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[0].platType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: colors.Array.data[4].platType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3563710093183793065, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: colors.Array.data[0].colorName
