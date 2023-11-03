@@ -14,6 +14,8 @@ public class PlayerAimHand : MonoBehaviour
     private Transform aimGunEndPoint;
     public Text bulletCountText;
     public int bulletCount = 30;
+    public int emptyBulletCount = 0;
+    bool emptyBullet = false;
     [SerializeField] public LayerMask platform;
     public event EventHandler<OnShootEventArgs> OnShoot;
     public class OnShootEventArgs : EventArgs
@@ -34,6 +36,7 @@ public class PlayerAimHand : MonoBehaviour
         nextFire = Time.time;
         reloadNextFire = Time.time;
         bulletCountText.text = bulletCount.ToString();
+        emptyBulletCount = 0;
     }
     private void Awake()
     { 
@@ -47,6 +50,7 @@ public class PlayerAimHand : MonoBehaviour
         HandleAim();
         HandleShooting();
         HandleReload();
+        HandleEmptyBullet();
     }
 
     private void HandleAim()
@@ -159,6 +163,15 @@ public class PlayerAimHand : MonoBehaviour
             {
                 analytics.GetComponent<GoogleFormUploader>().RecordData(formEntry,analyticAbilty);
             }
+        }
+    }
+
+    void HandleEmptyBullet()
+    {
+        if(!emptyBullet &&  bulletCount<=0)
+        {
+            emptyBulletCount++;
+            emptyBullet = !emptyBullet;
         }
     }
 

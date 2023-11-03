@@ -41,7 +41,9 @@ public class EnemyHealthBar : MonoBehaviour
             }
             else
             {
-                GameObject analytics = GameObject.Find("Analytics");;
+                GameObject analytics = GameObject.Find("Analytics");
+                GameObject player = GameObject.Find("Player");
+                GameObject platform = GameObject.Find("Color Platform");
                 Health.enemyHealth = 1f;
                 Scene scene = SceneManager.GetActiveScene();
                 //if (scene.name == "Tutorisl-Level2")
@@ -59,7 +61,8 @@ public class EnemyHealthBar : MonoBehaviour
                      if (analytics)
                      {
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.2006131830", (int)elapsedTime);
-                     }
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1642877412", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                    }
                      SceneManager.LoadScene("NextLevel2");
                 }
                 if (scene.name == "Level 2") {
@@ -67,7 +70,8 @@ public class EnemyHealthBar : MonoBehaviour
                     if (analytics)
                      {
                         analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1328253810", (int)elapsedTime);
-                     }
+                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1606956756", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                    }
                      SceneManager.LoadScene("NextLevel3");
                 }
                 if (scene.name == "Home") {
@@ -77,7 +81,9 @@ public class EnemyHealthBar : MonoBehaviour
                      if (analytics)
                      {
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
-                     }
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                    }
 
                      SceneManager.LoadScene("Finish");
                 }

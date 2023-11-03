@@ -28,7 +28,42 @@ public class PlayerHealthBar : MonoBehaviour
         }
         
         if(Health.playerHealth == 0f) {
+
+            GameObject analytics = GameObject.Find("Analytics");
+            GameObject player = GameObject.Find("Player");
+            GameObject platform = GameObject.Find("Color Platform");
+
+            Scene scene = SceneManager.GetActiveScene();
+
+            if (scene.name == "Level 1")
+            {
+
+                if (analytics)
+                {
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1642877412", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                }
+            }
+            else if (scene.name == "Level 2")
+            {
+
+                if (analytics)
+                {
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1606956756", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                }
+            }
+            else if (scene.name == "Home")
+            {
+
+                if (analytics)
+                {
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                    analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount); ;
+                }
+
+            }
+
             Debug.Log("Player died!");
+
             SceneManager.LoadScene("GameOver");
         }
 

@@ -78,6 +78,10 @@ public class ToggleVisibility : MonoBehaviour
             disappearDelay -= Time.deltaTime;
         }
 
+        GameObject.Find("Analytics").GetComponent<GoogleFormUploader>().dissapearCount++;
+
+        Debug.Log("Platform disappear count: " + GameObject.Find("Analytics").GetComponent<GoogleFormUploader>().dissapearCount);
+
         ToggleVisibilityState();
     }
 }
