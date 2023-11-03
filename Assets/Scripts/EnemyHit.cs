@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EnemyHit : MonoBehaviour
 {
     public EnemyHealthBar enemyHealthBar;
+    public float damage = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class EnemyHit : MonoBehaviour
             Color enemyColor = transform.GetComponent<Renderer>().material.color;
             if (bulletColor == enemyColor)
             {
-                enemyHealthBar.Damage(0.1f);
+                enemyHealthBar.Damage(damage);
             }
 
             else if (enemyColor == Color.blue)

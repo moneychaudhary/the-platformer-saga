@@ -11,6 +11,7 @@ public class TutorialLevelOne : MonoBehaviour
     private BoxCollider2D boxCollider;
     public GameObject arrow;
     public GameObject enemy;
+    public GameObject enemyHealth;
     public GameObject aimAndShoot;
     [SerializeField] public LayerMask platform;
     public Text instructionText;
@@ -40,6 +41,7 @@ public class TutorialLevelOne : MonoBehaviour
                 arrow.SetActive(false);
                 enemy.SetActive(true);
                 aimAndShoot.SetActive(true);
+                enemyHealth.SetActive(true);
                 instructionText.text = "Shoot the enemy by hopping to enemy colored platform.";
                 //SceneManager.LoadScene("Tutorisl-Level2");
             }
