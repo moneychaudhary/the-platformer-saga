@@ -43,6 +43,7 @@ public class EnemyHealthBar : MonoBehaviour
             {
                 GameObject analytics = GameObject.Find("Analytics");
                 GameObject player = GameObject.Find("Player");
+                GameObject platform = GameObject.Find("Color Platform");
                 Health.enemyHealth = 1f;
                 Scene scene = SceneManager.GetActiveScene();
                 //if (scene.name == "Tutorisl-Level2")
@@ -81,6 +82,7 @@ public class EnemyHealthBar : MonoBehaviour
                      {
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
                     }
 
                      SceneManager.LoadScene("Finish");
