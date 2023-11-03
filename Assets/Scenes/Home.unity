@@ -4751,6 +4751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fef004ef3c70473b8feeae8d6640007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 8692973187373753366, guid: c36ce8652794c49588b29ef404717c65, type: 3}
+  - {fileID: 9010870804866396222, guid: d8156747b68a243ce9c1f4d40855430c, type: 3}
+  respawnTime: 0.5
 --- !u!1 &1582738946
 GameObject:
   m_ObjectHideFlags: 0
