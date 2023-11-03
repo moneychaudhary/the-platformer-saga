@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBulletMovement : MonoBehaviour
 {
  
-    float fireRate;
+    public float fireRate = 1.2f;
     float nextFire;
     public int speed = 20;
     public GameObject BulletPrefab;
@@ -14,7 +14,6 @@ public class EnemyBulletMovement : MonoBehaviour
     Vector2 moveDir;
     void Start()
     {
-        fireRate = 1.2f;
         nextFire = Time.time;
     }
 
