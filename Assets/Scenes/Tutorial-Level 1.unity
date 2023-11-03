@@ -1556,6 +1556,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 24
   instructionText: {fileID: 1433849061}
+  script: {fileID: 0}
 --- !u!114 &703143147
 MonoBehaviour:
   m_ObjectHideFlags: 0

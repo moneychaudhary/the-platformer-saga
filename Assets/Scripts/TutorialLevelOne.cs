@@ -15,6 +15,7 @@ public class TutorialLevelOne : MonoBehaviour
     public GameObject aimAndShoot;
     [SerializeField] public LayerMask platform;
     public Text instructionText;
+    public TutorialLevel1Script script;
 
     // Update is called once per frame
     void Update()
@@ -43,7 +44,6 @@ public class TutorialLevelOne : MonoBehaviour
                 aimAndShoot.SetActive(true);
                 enemyHealth.SetActive(true);
                 instructionText.text = "Shoot the enemy by hopping to enemy colored platform.";
-                //SceneManager.LoadScene("Tutorisl-Level2");
             }
         }
     }

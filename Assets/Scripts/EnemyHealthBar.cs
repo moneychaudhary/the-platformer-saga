@@ -35,7 +35,7 @@ public class EnemyHealthBar : MonoBehaviour
     {
         if (enemyDeathTime < 0f)
         {
-            if (Health.enemyHealth - damage >= 0f)
+            if (Health.enemyHealth - damage > 0f)
             {
                 Health.enemyHealth -= damage;
             }
@@ -44,11 +44,11 @@ public class EnemyHealthBar : MonoBehaviour
                 GameObject analytics = GameObject.Find("Analytics");;
                 Health.enemyHealth = 1f;
                 Scene scene = SceneManager.GetActiveScene();
-                if (scene.name == "Tutorisl-Level2")
-                {
-                    SceneManager.LoadScene("Tutorial-Level3");
-                }
-                if (scene.name == "Tutorial-Level3")
+                //if (scene.name == "Tutorisl-Level2")
+                //{
+                //    SceneManager.LoadScene("Tutorial-Level3");
+                //}
+                if (scene.name == "Tutorial-Level 1")
                 {
                     SceneManager.LoadScene("Start");
                 }
