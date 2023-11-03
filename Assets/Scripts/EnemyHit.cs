@@ -53,6 +53,7 @@ public class EnemyHit : MonoBehaviour
         // GetComponent<Renderer>().material.color = Color.blue;
         yield return new WaitForSeconds(7f);
         GetComponent<EnemyMoveUpDown>().enabled = true;
+        GetComponent<EnemyBulletMovement>().enabled = true;
         Scene scene = SceneManager.GetActiveScene();
         GetComponent<Renderer>().material.color = Color.red;
     }
