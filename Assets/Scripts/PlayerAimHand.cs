@@ -49,7 +49,6 @@ public class PlayerAimHand : MonoBehaviour
     {
         HandleAim();
         HandleShooting();
-        HandleReload();
         HandleEmptyBullet();
     }
 
@@ -80,33 +79,28 @@ public class PlayerAimHand : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("BulletReload")) {
+            Destroy(collision.gameObject);
+            HandleReload();
+        }
+        if (collision.gameObject.CompareTag("HealthReload")) {
+            Destroy(collision.gameObject);
+            HealthReload();
+        }
+    }
+
     public void HandleReload()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
-        RaycastHit2D hit = Physics2D.BoxCast(
-            boxCollider.bounds.center,
-            boxCollider.bounds.size,
-            0f,
-            Vector2.down,
-            0.2f,
-            platform);
-        if (hit)
+       bulletCount = Math.Min(bulletCount + 3, 30);
+       bulletCountText.text = bulletCount.ToString();
+    }
+
+    public void HealthReload()
+    {
+        if(Health.playerHealth < 1.0f)
         {
-            Color tempColor = hit.transform.GetComponent<Renderer>().material.color;
-            if (Math.Round(tempColor.r, 2) == 0 && Math.Round(tempColor.g, 2) == 0.5 && Math.Round(tempColor.b, 2) == 0 && Math.Round(tempColor.a, 2) == 0)
-            {
-                transform.GetComponent<PlayerMovement>().canJump = true;
-                if (Time.time > reloadNextFire)
-                {
-                    bulletCount = Math.Min(bulletCount + 3, 30);
-                    bulletCountText.text = bulletCount.ToString();
-                    reloadNextFire = Time.time + 1.0f;
-                }
-            }
-        }
-        else
-        {
-            transform.GetComponent<PlayerMovement>().canJump = true;
+           Health.playerHealth = Math.Min(Health.playerHealth + 0.2f, 1.0f);
         }
     }
 

@@ -11,13 +11,12 @@ public class PlayerHealthBar : MonoBehaviour
     void Start()
     {
         healthBar = GetComponent<RectTransform>();
-        UpdateHealthBar(Health.playerHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateHealthBar(Health.playerHealth);
     }
 
     public void Damage(float damage) {
