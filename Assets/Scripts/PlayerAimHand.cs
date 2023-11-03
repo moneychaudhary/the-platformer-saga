@@ -88,11 +88,31 @@ public class PlayerAimHand : MonoBehaviour
             Destroy(collision.gameObject);
             HealthReload();
         }
+        if(collision.gameObject.CompareTag("Ground")) {
+            boxCollider = GetComponent<BoxCollider2D>();
+            RaycastHit2D hit = Physics2D.BoxCast(
+            boxCollider.bounds.center,
+            boxCollider.bounds.size,
+            0f,
+            Vector2.down,
+            0.2f,
+            platform);
+            if(Math.Round(hit.transform.GetComponent<Renderer>().material.color.r, 2) == 0.80 && 
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.g, 2) == 1.0 && 
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.b, 2) == 0.0 && 
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.a, 2) == 1.0) {
+                Debug.Log("One Hit KO!");
+                if(bulletCount > 1) {
+                    bulletCount = 1;
+                    bulletCountText.text = bulletCount.ToString();
+                }
+            }
+        }
     }
 
     public void HandleReload()
     {
-       bulletCount = Math.Min(bulletCount + 5, 30);
+       bulletCount = Math.Min(bulletCount + 3, 30);
        bulletCountText.text = bulletCount.ToString();
     }
 
