@@ -82,7 +82,6 @@ public class EnemyHealthBar : MonoBehaviour
                      {
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
-                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
                     }
 
                      SceneManager.LoadScene("NextLevel4");
@@ -93,8 +92,8 @@ public class EnemyHealthBar : MonoBehaviour
 
                      if (analytics)
                      {
-                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
-                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1724123899", (int)elapsedTime);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.517618210", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
                     }
 
@@ -106,8 +105,8 @@ public class EnemyHealthBar : MonoBehaviour
 
                      if (analytics)
                      {
-                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1883594124", (int)elapsedTime);
-                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1984991129", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1625429721", (int)elapsedTime);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.813673215", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
                     }
 
