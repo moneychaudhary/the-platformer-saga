@@ -49,6 +49,7 @@ public class ToggleVisibility : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(StartDisappearTimer());
+            //Debug.Log("Landed on color:" + transform.GetComponent<Renderer>().material.color);
         }
     }
 

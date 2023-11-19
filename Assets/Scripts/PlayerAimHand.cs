@@ -137,7 +137,7 @@ public class PlayerAimHand : MonoBehaviour
             platform);
         if (hit && bulletCount > 0)
         {
-            GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z - 90)));
+            GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x + 180, startLocation.transform.rotation.y, startLocation.transform.rotation.z + 180)));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Renderer bulletSprite = bullet.GetComponent<Renderer>();
             bulletColor = hit.transform.GetComponent<Renderer>().material.color;
