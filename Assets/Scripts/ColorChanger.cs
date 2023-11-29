@@ -16,7 +16,7 @@ public class ColorChanger : MonoBehaviour
     }
 
     public List<ColorData> colors = new List<ColorData>();
-    private SpriteShapeRenderer platformRenderer;
+    private Renderer platformRenderer;
     public int currentColorIndex;
     private float timeRemaining;
     public float colorChangeInterval = 15f;
@@ -46,7 +46,7 @@ public class ColorChanger : MonoBehaviour
     private void Start()
     {
         floatTransform.gameObject.SetActive(false);
-        platformRenderer = GetComponent<SpriteShapeRenderer>();
+        platformRenderer = GetComponent<Renderer>();
 
         // Initialize the platform color based on the selected PlatType.
         InitializePlatformColor();

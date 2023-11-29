@@ -28,7 +28,7 @@ public class EnemyBulletMovement : MonoBehaviour
     {
         if(Time.time > nextFire)
         {
-            GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z - 90)));
+            GameObject bullet = Instantiate(BulletPrefab, startLocation.transform.position, Quaternion.Euler(new Vector3(startLocation.transform.rotation.x, startLocation.transform.rotation.y, startLocation.transform.rotation.z)));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Renderer bulletSprite = bullet.GetComponent<Renderer>();
             bulletSprite.material.color = Color.green;
