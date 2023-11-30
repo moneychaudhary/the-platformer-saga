@@ -34,7 +34,7 @@ public class EnemyHit : MonoBehaviour
             
             if(Math.Round(bulletColor.r, 2) == 0.68 && Math.Round(bulletColor.g, 2) == 0.85 && Math.Round(bulletColor.b, 2) == 0.9 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("Freeze!");
-                StartCoroutine(Freeze());
+                StartCoroutine(Freeze(enemyColor));
             } else if(Math.Round(bulletColor.r, 2) == 1.0 && Math.Round(bulletColor.g, 2) == 0.65 && Math.Round(bulletColor.b, 2) == 0 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("Double Damage!");
                 enemyHealthBar.Damage(2 * damage);
@@ -48,7 +48,7 @@ public class EnemyHit : MonoBehaviour
         }
     }
 
-    private IEnumerator Freeze() {
+    private IEnumerator Freeze(Color enemyColor) {
         GetComponent<EnemyMoveUpDown>().enabled = false;
         GetComponent<EnemyBulletMovement>().enabled = false;
         GetComponent<Renderer>().material.color = Color.blue;
@@ -56,8 +56,7 @@ public class EnemyHit : MonoBehaviour
         GetComponent<EnemyMoveUpDown>().enabled = true;
         GetComponent<EnemyBulletMovement>().enabled = true;
         Scene scene = SceneManager.GetActiveScene();
-        GetComponent<Renderer>().material.color = Color.red;
+        GetComponent<Renderer>().material.color = enemyColor;
     }
-
     
 }
