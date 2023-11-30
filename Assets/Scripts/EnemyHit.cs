@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class EnemyHit : MonoBehaviour
 {
     public EnemyHealthBar enemyHealthBar;
-    // public GameObject tearPrefab;
-    // public GameObject tearLocation;
+    public GameObject tearPrefab;
+    public GameObject tearLocation;
     public float damage = 0.1f;
     GameObject fireEffect;
     // Start is called before the first frame update
@@ -63,9 +63,9 @@ public class EnemyHit : MonoBehaviour
 
     private void showTears()
     {
-        // fireEffect = Instantiate(tearPrefab, tearLocation.transform.position, Quaternion.Euler(new Vector3(tearLocation.transform.rotation.x, tearLocation.transform.rotation.y, tearLocation.transform.rotation.z)));
-        // Rigidbody2D rb = fireEffect.GetComponent<Rigidbody2D>();
-        // rb.velocity = Vector2.down * 10;
+        fireEffect = Instantiate(tearPrefab, tearLocation.transform.position, Quaternion.Euler(new Vector3(tearLocation.transform.rotation.x, tearLocation.transform.rotation.y, tearLocation.transform.rotation.z)));
+        Rigidbody2D rb = fireEffect.GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.down * 10;
     }
 
     private IEnumerator Freeze(Color enemyColor) {
