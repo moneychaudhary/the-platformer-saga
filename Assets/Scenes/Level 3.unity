@@ -4618,6 +4618,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
   m_PrefabInstance: {fileID: 1183653983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189939939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189939940}
+  m_Layer: 0
+  m_Name: TearsLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1189939940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189939939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.17000008, y: -0.14, z: -1.17273}
+  m_LocalScale: {x: 0.25, y: 0.26874998, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1946947415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1271718340
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,6 +7277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 987069015}
+  - {fileID: 1189939940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1946947416
@@ -7347,6 +7379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealthBar: {fileID: 35450192}
+  tearPrefab: {fileID: 8664299117098413492, guid: aa6efea1b5b714f679198374b9bcb319, type: 3}
+  tearLocation: {fileID: 1189939939}
   damage: 0.3
 --- !u!114 &1946947420
 MonoBehaviour:
