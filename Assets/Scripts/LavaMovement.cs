@@ -52,7 +52,8 @@ public class LavaMovement : MonoBehaviour
             if( playerHit.collider.gameObject.tag == "Player")
             {
                 fireEffect = Instantiate(fireEffectPrefab, playerHit.transform);
-                playerHit.collider.gameObject.GetComponent<PlayerMovement>().enabled = false ;
+                playerHit.collider.gameObject.GetComponent<PlayerMovement>().canJump = false;
+                playerHit.collider.gameObject.GetComponent<PlayerMovement>().speed = 0;
                 StartCoroutine(PlayerDeath());
 
             }
