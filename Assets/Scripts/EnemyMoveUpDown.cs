@@ -16,6 +16,19 @@ public class EnemyMoveUpDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x, Mathf.Sin(Time.time + freq) * amp);
+        float newYPosition = Mathf.Sin(Time.time + freq) * amp;
+        GameObject lava = GameObject.FindWithTag("LavaScalePoint");
+       
+        if (lava)
+        {
+            float lavaYPosition = lava.transform.position.y + 3.5f;
+            if (newYPosition < lavaYPosition)
+            {
+                Debug.Log("hello");
+                newYPosition = lavaYPosition;
+            }
+        }
+        
+        transform.position = new Vector2(transform.position.x, newYPosition);
     }
 }

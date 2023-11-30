@@ -11,6 +11,8 @@ TagManager:
   - BulletReload
   - HealthReload
   - BulletReloadTutorial
+  - Lava
+  - LavaScalePoint
   layers:
   - Default
   - TransparentFX

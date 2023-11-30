@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2829d355c88402496758894b393d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 0.2
+  scaleSpeed: 0.02
   platform:
     serializedVersion: 2
     m_Bits: 8
@@ -4491,7 +4491,7 @@ Transform:
   m_GameObject: {fileID: 1566748206}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5110936, y: 0.43786067, z: -1.17273}
+  m_LocalPosition: {x: 0.14, y: -0.21, z: -1.17273}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4990,7 +4990,7 @@ GameObject:
   - component: {fileID: 1938664706}
   m_Layer: 6
   m_Name: Lava Scale Point
-  m_TagString: Untagged
+  m_TagString: LavaScalePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5004,7 +5004,7 @@ Transform:
   m_GameObject: {fileID: 1938664705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.57, y: -0.3, z: 0.011896394}
+  m_LocalPosition: {x: -0.57, y: 0.97, z: 0.011896394}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5345,11 +5345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2349944575833388272, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.38
+      value: -22.67
       objectReference: {fileID: 0}
     - target: {fileID: 2349944575833388272, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.88
+      value: 10.21
       objectReference: {fileID: 0}
     - target: {fileID: 2349944575833388272, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_LocalPosition.z

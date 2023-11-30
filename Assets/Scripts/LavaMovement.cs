@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LavaMovement : MonoBehaviour
 {
 
-    [SerializeField] float scaleSpeed = 0.1f;
+    [SerializeField] float scaleSpeed = 0.02f;
     private BoxCollider2D boxCollider;
     [SerializeField] public LayerMask platform;
     [SerializeField] public LayerMask player;
@@ -21,9 +21,15 @@ public class LavaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        transform.localScale = new Vector2(transform.localScale.x,
-                                       transform.localScale.y + scaleSpeed * Time.deltaTime);
+
+        float scaleIncrease = scaleSpeed * Time.deltaTime;
+        transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y + scaleIncrease);
+
+        // Move the object up by half the amount it grew
+        transform.position = new Vector3(transform.position.x, transform.position.y + scaleIncrease, transform.position.z);
+
+        //transform.localScale = new Vector2(transform.localScale.x,
+                                       //transform.localScale.y + scaleSpeed * Time.deltaTime);
 
 
         boxCollider = GetComponent<BoxCollider2D>();
