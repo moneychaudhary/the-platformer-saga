@@ -4766,7 +4766,7 @@ MonoBehaviour:
   colors:
   - colorName: Color2
     color: {r: 0.5019608, g: 0, b: 0.5019608, a: 1}
-  colorChangeInterval: 15
+  colorChangeInterval: 10
   platformColors: {fileID: 0}
 --- !u!1 &1946976862
 GameObject:

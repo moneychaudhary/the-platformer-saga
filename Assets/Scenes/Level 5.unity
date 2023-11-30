@@ -5761,6 +5761,10 @@ PrefabInstance:
       propertyPath: platformColors
       value: 
       objectReference: {fileID: 783742908}
+    - target: {fileID: 3303466470154765487, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
+      propertyPath: colorChangeInterval
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3977046031423671345, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
