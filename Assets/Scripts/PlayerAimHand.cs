@@ -82,7 +82,11 @@ public class PlayerAimHand : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("BulletReload")) {
             Destroy(collision.gameObject);
-             HandleReload();
+             HandleReload(3);
+        }
+        if (collision.gameObject.CompareTag("BulletReloadTutorial")) {
+            Destroy(collision.gameObject);
+             HandleReload(30);
         }
         if (collision.gameObject.CompareTag("HealthReload")) {
             Destroy(collision.gameObject);
@@ -110,9 +114,9 @@ public class PlayerAimHand : MonoBehaviour
         }
     }
 
-    public void HandleReload()
+    public void HandleReload(int reloadCount)
     {
-       bulletCount = Math.Min(bulletCount + 3, 30);
+       bulletCount = Math.Min(bulletCount + reloadCount, 30);
        bulletCountText.text = bulletCount.ToString();
     }
 

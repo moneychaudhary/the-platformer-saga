@@ -2858,12 +2858,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2119144865}
     - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      propertyPath: speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: bulletCountText
       value: 
       objectReference: {fileID: 18843952}
     - target: {fileID: 4560769800075588975, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559596063209880126, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

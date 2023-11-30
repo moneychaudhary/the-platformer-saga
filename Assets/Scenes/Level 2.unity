@@ -771,12 +771,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2119144865}
     - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      propertyPath: speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4560769800075588975, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559596063209880126, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -814,7 +822,7 @@ MonoBehaviour:
   platform:
     serializedVersion: 2
     m_Bits: 24
-  speed: 15
+  speed: 25
   BulletPrefab: {fileID: 7172550173238294394, guid: 4ee5f2e30fe7e44c3b65eec215cd95cf, type: 3}
   startLocation: {fileID: 415172513}
 --- !u!95 &415172515
