@@ -21,7 +21,7 @@ public class Level3Script : MonoBehaviour
             healthText.text = "";
         }
 
-        if (collision.gameObject.CompareTag("BulletReload"))
+        if (collision.gameObject.CompareTag("BulletReloadTutorial"))
         {
             bulletText.text = "";
         }

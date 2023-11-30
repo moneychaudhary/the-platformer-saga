@@ -10,6 +10,7 @@ TagManager:
   - EnemyHealth
   - BulletReload
   - HealthReload
+  - BulletReloadTutorial
   layers:
   - Default
   - TransparentFX
