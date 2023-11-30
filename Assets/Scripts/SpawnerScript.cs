@@ -21,12 +21,14 @@ public class SpawnerScript : MonoBehaviour
     IEnumerator ObjectSpawner()
     {
         while(true) {
-            yield return new WaitForSeconds(Random.Range(4, 8));
+            // yield return new WaitForSeconds(Random.Range(4, 8));
             if (!lastObject) {
                 SpawnObject();
             }
             else {
+                yield return new WaitForSeconds(Random.Range(6, 8));
                 Destroy(lastObject);
+                lastObject = null;
             }
         }
     }
