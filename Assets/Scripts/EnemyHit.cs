@@ -34,7 +34,9 @@ public class EnemyHit : MonoBehaviour
             
             if(Math.Round(bulletColor.r, 2) == 0.68 && Math.Round(bulletColor.g, 2) == 0.85 && Math.Round(bulletColor.b, 2) == 0.9 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("Freeze!");
-                StartCoroutine(Freeze(enemyColor));
+                if(enemyColor != Color.blue) {
+                    StartCoroutine(Freeze(enemyColor));
+                }
             } else if(Math.Round(bulletColor.r, 2) == 1.0 && Math.Round(bulletColor.g, 2) == 0.65 && Math.Round(bulletColor.b, 2) == 0 && Math.Round(bulletColor.a, 2) == 1.0) {
                 Debug.Log("Double Damage!");
                 enemyHealthBar.Damage(2 * damage);
