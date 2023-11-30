@@ -5733,6 +5733,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 111253823402626137, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.90006196
+      objectReference: {fileID: 0}
+    - target: {fileID: 111253823402626137, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0983684
+      objectReference: {fileID: 0}
+    - target: {fileID: 111253823402626137, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0015430003
+      objectReference: {fileID: 0}
+    - target: {fileID: 111253823402626137, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.050117075
+      objectReference: {fileID: 0}
     - target: {fileID: 1188715137741039734, guid: 934e6ddd6f43d462892a1e8e36a7190b, type: 3}
       propertyPath: m_Name
       value: Enemy
