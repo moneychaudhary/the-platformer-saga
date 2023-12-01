@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2829d355c88402496758894b393d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 0.02
+  scaleSpeed: 0.03
   platform:
     serializedVersion: 2
     m_Bits: 8
@@ -8480,6 +8480,10 @@ PrefabInstance:
       propertyPath: playerHealthBar
       value: 
       objectReference: {fileID: 2119144865}
+    - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      propertyPath: speed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: bulletCountText
       value: 
