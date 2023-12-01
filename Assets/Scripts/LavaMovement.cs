@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LavaMovement : MonoBehaviour
 {
 
-    [SerializeField] float scaleSpeed = 0.02f;
+    [SerializeField] public float scaleSpeed = 0.02f;
     private BoxCollider2D boxCollider;
     [SerializeField] public LayerMask platform;
     [SerializeField] public LayerMask player;

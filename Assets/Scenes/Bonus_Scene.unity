@@ -6566,6 +6566,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491478893866371908, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: bulletCountText
       value: 
       objectReference: {fileID: 0}
@@ -6592,12 +6596,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4560769800075588975, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 703143146}
+    - targetCorrespondingSourceObject: {fileID: 4560769800075588975, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4530817332040618287}
   m_SourcePrefab: {fileID: 100100000, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
 --- !u!4 &4530817332040618279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2349944575833388272, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
   m_PrefabInstance: {fileID: 4530817332040618278}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4530817332040618287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703143137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9e41041f874ccc99edccae4e5c7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platform:
+    serializedVersion: 2
+    m_Bits: 8
+  player: {fileID: 703143137}
+  lava: {fileID: 484190145}
+  prize: {fileID: 1850833151}
 --- !u!1001 &7470416432079485189
 PrefabInstance:
   m_ObjectHideFlags: 0
