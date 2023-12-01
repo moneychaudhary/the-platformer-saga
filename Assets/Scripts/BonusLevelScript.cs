@@ -77,6 +77,7 @@ public class BonusLevelScript : MonoBehaviour
         prize.GetComponent<PrizeMovement>().verticalSpeed = temp * 2;
         yield return new WaitForSeconds(5);
         prize.GetComponent<PrizeMovement>().verticalSpeed = temp;
+	speedBall = false;
     }
 
 
