@@ -33,7 +33,6 @@ public class ToggleVisibility : MonoBehaviour
 
         disappearDelay = platformDespawnTime;
         reappearDelay = platformRespawnTime;
-        //StartCoroutine(TrackColorChanges());
     }
 
     void Update()
@@ -108,7 +107,6 @@ public class ToggleVisibility : MonoBehaviour
         Debug.Log("Platform disappear count: " + GameObject.Find("Analytics").GetComponent<GoogleFormUploader>().dissapearCount);
 
         ToggleVisibilityState();
-        //objectRenderer.material.color = originalColor;
         objectRenderer.material.color = colorsList[colorIndex].color;
     }
 
@@ -128,29 +126,8 @@ public class ToggleVisibility : MonoBehaviour
             yield return null;
         }
 
-        newColor.a = 0.0f; // Ensure it's fully faded
+        newColor.a = 0.0f;
         //objectRenderer.material.color = newColor;
         //objectRenderer.material.color = colorsList[colorIndex].color;
     }
-    /*
-    IEnumerator TrackColorChanges()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1.0f); // Check color changes every 1 second (adjust as needed)
-
-            Color currentColor = objectRenderer.material.color;
-
-            // Check if the color has changed
-            if (currentColor != originalColor)
-            {
-                // Color has changed, do something with the new color
-                Debug.Log("Material color has changed: " + currentColor);
-
-                // Update the previous color to the new color
-                originalColor = currentColor;
-            }
-        }
-    }
-    */
 }

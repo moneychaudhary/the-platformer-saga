@@ -3224,6 +3224,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6038408882047381691, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: objectRenderer
+      value: 
+      objectReference: {fileID: 1117062342}
     - target: {fileID: 6282824874828949735, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3248,6 +3252,11 @@ PrefabInstance:
 --- !u!4 &1117062341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+  m_PrefabInstance: {fileID: 1117062340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1117062342 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2875400872464110706, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
   m_PrefabInstance: {fileID: 1117062340}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1177577139
@@ -4609,6 +4618,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6038408882047381691, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+      propertyPath: objectRenderer
+      value: 
+      objectReference: {fileID: 1304865530}
     - target: {fileID: 6282824874828949735, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4638,6 +4651,11 @@ GameObject:
 --- !u!4 &1286611909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 237947619900261648, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
+  m_PrefabInstance: {fileID: 1286611907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1304865530 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2875400872464110706, guid: 4f08efdb4da5e424fb1e998ed46918aa, type: 3}
   m_PrefabInstance: {fileID: 1286611907}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1320986131
@@ -6362,7 +6380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1946947414
 SpriteRenderer:
   m_ObjectHideFlags: 0
