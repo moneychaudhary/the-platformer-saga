@@ -58,4 +58,8 @@ public class GameController : MonoBehaviour
          SceneManager.LoadScene("Level 5");
     }
 
+    public void StartLevel6() {
+         SceneManager.LoadScene("Level 6");
+    }
+
 }

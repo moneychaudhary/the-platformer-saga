@@ -110,6 +110,19 @@ public class EnemyHealthBar : MonoBehaviour
                        analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
                     }
 
+                     SceneManager.LoadScene("NextLevel6");
+                }
+                if (scene.name == "Level 6") {
+
+                    Debug.Log("Level3 Time " + elapsedTime);
+
+                     if (analytics)
+                     {
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1625429721", (int)elapsedTime);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.813673215", (int)player.GetComponent<PlayerAimHand>().emptyBulletCount);
+                       analytics.GetComponent<GoogleFormUploader>().RecordData("entry.1784052201", (int)analytics.GetComponent<GoogleFormUploader>().dissapearCount);
+                    }
+
                      SceneManager.LoadScene("Finish");
                 }
                 if (scene.name == "Home")

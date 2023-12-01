@@ -101,9 +101,9 @@ public class PlayerAimHand : MonoBehaviour
             Vector2.down,
             0.2f,
             platform);
-            if(Math.Round(hit.transform.GetComponent<Renderer>().material.color.r, 2) == 0.80 && 
-            Math.Round(hit.transform.GetComponent<Renderer>().material.color.g, 2) == 1.0 && 
-            Math.Round(hit.transform.GetComponent<Renderer>().material.color.b, 2) == 0.0 && 
+            if(Math.Round(hit.transform.GetComponent<Renderer>().material.color.r, 2) == 0.80 &&
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.g, 2) == 1.0 &&
+            Math.Round(hit.transform.GetComponent<Renderer>().material.color.b, 2) == 0.0 &&
             Math.Round(hit.transform.GetComponent<Renderer>().material.color.a, 2) == 1.0) {
                 Debug.Log("One Hit KO!");
                 if(bulletCount > 1) {
