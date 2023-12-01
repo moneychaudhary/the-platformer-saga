@@ -105,8 +105,8 @@ public class PlayerAimHand : MonoBehaviour
             Math.Round(hit.transform.GetComponent<Renderer>().material.color.g, 2) == 1.0 &&
             Math.Round(hit.transform.GetComponent<Renderer>().material.color.b, 2) == 0.0 &&
             Math.Round(hit.transform.GetComponent<Renderer>().material.color.a, 2) == 1.0) {
-                Debug.Log("One Hit KO!");
-                if(bulletCount > 1) {
+                Debug.Log("One Hit KO!!");
+                if(bulletCount != null && bulletCount > 1) {
                     bulletCount = 1;
                     bulletCountText.text = bulletCount.ToString();
                 }
