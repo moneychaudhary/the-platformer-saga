@@ -9,9 +9,15 @@ public class FollowPlayer : MonoBehaviour
     {
         if (target != null)
         {
-            Vector3 desiredPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-            transform.position = smoothedPosition;
+            // Only follow the player's y-position
+            float desiredY = target.position.y;
+            float smoothedY = Mathf.Lerp(transform.position.y, desiredY, smoothSpeed);
+
+            // Maintain the camera's x-position
+            float currentX = transform.position.x;
+
+            // Set the new camera position
+            transform.position = new Vector3(currentX, smoothedY, transform.position.z);
         }
     }
 }

@@ -13,6 +13,7 @@ TagManager:
   - BulletReloadTutorial
   - Lava
   - LavaScalePoint
+  - Prize
   layers:
   - Default
   - TransparentFX
