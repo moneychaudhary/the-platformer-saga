@@ -8218,11 +8218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4869797884697789583, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4869797884697789583, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1334749589
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5559596063209880126, guid: 16251d5adea98488fa3409924232b3ab, type: 3}
       propertyPath: speed
