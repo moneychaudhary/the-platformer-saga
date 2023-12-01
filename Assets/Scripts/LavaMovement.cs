@@ -10,6 +10,8 @@ public class LavaMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     [SerializeField] public LayerMask platform;
     [SerializeField] public LayerMask player;
+    [SerializeField] public LayerMask bullet;
+    [SerializeField] public LayerMask enemyBullet;
     public GameObject fireEffectPrefab;
     GameObject fireEffect;
     // Start is called before the first frame update
@@ -37,7 +39,7 @@ public class LavaMovement : MonoBehaviour
             boxCollider.bounds.center,
             boxCollider.bounds.size,
             0f,
-            Vector2.down,
+            Vector2.up,
             0.2f,
             platform);
 
@@ -45,12 +47,37 @@ public class LavaMovement : MonoBehaviour
             boxCollider.bounds.center,
             boxCollider.bounds.size,
             0f,
-            Vector2.down,
+            Vector2.up,
             0.2f,
             player);
+
+        RaycastHit2D bulletHit = Physics2D.BoxCast(
+            boxCollider.bounds.center,
+            boxCollider.bounds.size,
+            0f,
+            Vector2.up,
+            0.2f,
+            bullet);
+        RaycastHit2D enemyBulletHit = Physics2D.BoxCast(
+            boxCollider.bounds.center,
+            boxCollider.bounds.size,
+            0f,
+            Vector2.up,
+            0.2f,
+            enemyBullet);
         if (hit)
         {
             Destroy(hit.collider.gameObject);
+        }
+
+        if (bulletHit)
+        {
+            Destroy(bulletHit.collider.gameObject);
+        }
+
+        if (enemyBulletHit)
+        {
+            Destroy(enemyBulletHit.collider.gameObject);
         }
 
         if (playerHit)
