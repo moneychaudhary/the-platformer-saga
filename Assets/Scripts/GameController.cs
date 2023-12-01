@@ -45,4 +45,8 @@ public class GameController : MonoBehaviour
          SceneManager.LoadScene("Level 6");
     }
 
+    public void StartBonusLevel() {
+          SceneManager.LoadScene("Bonus_Scene");
+    }
+
 }
