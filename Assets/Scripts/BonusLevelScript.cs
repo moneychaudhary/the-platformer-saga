@@ -51,10 +51,10 @@ public class BonusLevelScript : MonoBehaviour
     {
         Debug.Log("Player Slowed!!!");
         slowDebuf = true;
-        float temp = player.GetComponent<PlayerController>().moveSpeed = player.GetComponent<PlayerController>().moveSpeed;
-        player.GetComponent<PlayerController>().moveSpeed = temp * (3 / 4);
+        float temp = player.GetComponent<PlayerMovement>().speed;
+        player.GetComponent<PlayerMovement>().speed = temp * 0.75f;
         yield return new WaitForSeconds(5);
-        player.GetComponent<PlayerController>().moveSpeed = temp;
+        player.GetComponent<PlayerMovement>().speed = temp;
         slowDebuf = false;
     }
 
